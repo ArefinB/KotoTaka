@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1155,4 +1156,1163 @@
   <script src="script.js"></script> 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- BASIC META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>KotoTaka – Cheapest Mobile Phone Prices in Bangladesh</title>
+  <meta name="description" content="Find the lowest prices for Samsung, Xiaomi, iPhone, Realme & more from local shops in Bangladesh. Updated daily.">
+
+  <!-- FAVICON & APPLE TOUCH ICONS -->
+  <link rel="shortcut icon" href="https://i.ibb.co.com/hxcs5PYp/Ico.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co.com/hxcs5PYp/Ico.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co.com/hxcs5PYp/Ico.png">
+
+  <link rel="stylesheet" href="stylee.css">
+
+  <!-- PWA / iOS SAFARI -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KotoTaka">
+  <meta name="theme-color" content="#ff4500">
+
+  <!-- OPEN GRAPH / SOCIAL -->
+  <meta property="og:title" content="KotoTaka – Cheapest Phone Prices in BD">
+  <meta property="og:description" content="Track the lowest mobile prices from local shops in Bangladesh. Updated daily.">
+  <meta property="og:image" content="https://i.ibb.co.com/RT56M0kK/KotoTaka.png">
+  <meta property="og:url" content="https://www.KotoTaka.store">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KotoTaka">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KotoTaka – Cheapest Phone Prices in BD">
+  <meta name="twitter:description" content="Real-time lowest prices from local shops in Bangladesh.">
+  <meta name="twitter:image" content="https://i.ibb.co.com/RT56M0kK/KotoTaka.png">
+
+  <!-- STRUCTURED DATA (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KotoTaka",
+    "alternateName": "কতোটাকা",
+    "url": "https://www.KotoTaka.store",
+    "description": "Find the cheapest mobile phone prices in Bangladesh from local shops. Updated daily.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.KotoTaka.store/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- FONTS (Preload critical) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3);
+      --card-bg: rgb(255, 255, 255);
+      --text: #1a1a1a;
+      --text-light: #555;
+      --accent: #ff4500;
+      --border: #e0e0e0;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --highlight: #fff5ba;
+    }
+
+    [data-theme="dark"] {
+      --bg-gradient: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+      --card-bg: rgba(20, 20, 35, 0.7);
+      --text: #e0e0ff;
+      --text-light: #aaa;
+      --accent: #ff5722;
+      --border: rgba(255, 255, 255, 0.1);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --highlight: #ffeb3b33;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      transition: var(--transition);
+      position: relative;
+      overflow-y: scroll;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: absolute;
+      top: 16 16px;
+      right: 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      width: 52px;
+      height: 28px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .theme-toggle::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      transition: var(--transition);
+      transform: translateX(0);
+    }
+
+    [data-theme="dark"] .theme-toggle::before {
+      transform: translateX(24px);
+    }
+
+    /* Logo */
+    .logo {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+      margin-bottom: 16px;
+    }
+
+    /* Search */
+    .search-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    #search {
+      width: 100%;
+      padding: 16px 40px 16px 20px;
+      font-size: 1.1rem;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      outline: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      color: var(--text);
+    }
+
+    [data-theme="dark"] #search,
+    [data-theme="dark"] #sortBtn {
+      color: #fff !important;
+    }
+
+    #search:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(255, 69, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    #autocomplete {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+      max-height: 300px;
+      overflow-y: auto;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .autocomplete-item {
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: var(--transition);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .autocomplete-item:hover {
+      background: rgba(255, 69, 0, 0.1);
+      color: var(--accent);
+    }
+
+    /* Clear Button */
+    .clear-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-weight: bold;
+      color: #999;
+      font-size: 1.2rem;
+      user-select: none;
+      display: none;
+    }
+    #search:not(:placeholder-shown) ~ .clear-btn { display: block; }
+    .clear-btn:hover { color: #555; }
+    [data-theme="dark"] .clear-btn { color: #ccc; }
+    [data-theme="dark"] .clear-btn:hover { color: #fff; }
+
+    /* Brand Cards */
+    #brandCards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 16px 0;
+      padding: 0 8px;
+    }
+
+    .brand-card {
+      padding: 10px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .brand-card::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .brand-card:active::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    .brand-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      border-color: var(--accent);
+    }
+
+    .brand-card.selected {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(255, 69, 0, 0.3);
+    }
+
+    .brand-badge {
+      margin-left: 6px;
+      font-size: 0.7rem;
+      background: rgba(0,0,0,0.1);
+      color: inherit;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    /* Price Range Title */
+    .price-range-title {
+      text-align: center;
+      margin: 20px 0 8px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* Price Range Cards */
+    #priceRangeCards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 8px 0;
+      padding: 0 8px;
+    }
+
+    .price-card {
+      padding: 8px 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      max-width: 120px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .price-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      border-color: var(--accent);
+    }
+
+    .price-card.selected {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* Sort Button */
+    #sortBtn {
+      display: none;
+      margin: 16px auto;
+      padding: 10px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      color: var(--text);
+    }
+
+    #sortBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      border-color: var(--accent);
+    }
+
+    /* Results */
+    #results {
+      list-style: none;
+      width: 100%;
+      max-width: 800px;
+      margin-top: 20px;
+      display: grid;
+      gap: 16px;
+      padding: 0 8px;
+    }
+
+    #results li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      animation: fadeIn 0.5s ease-out;
+      padding-top: 60px;         /* makes room for badge on top */
+      position: relative;        /* already has it, but confirm */
+    }
+
+    #results li:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .text-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .text-content strong {
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .shop {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+
+    .info {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+
+    .highlight {
+      background: var(--highlight);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Phone Image - NO BORDER RADIUS */
+    .phone-image img {
+      max-width: 90px;
+      max-height: 130px;
+      object-fit: contain;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 0 !important;
+      loading: lazy;
+    }
+
+    [data-theme="dark"] .phone-image img {
+      border-radius: 12px !important;
+    }
+
+    .footer-info {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 12px;
+      opacity: 0.8;
+    }
+
+    /* Skeleton & Empty */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      border-radius: 12px;
+      height: 120px;
+      margin: 12px 0;
+    }
+
+    .no-result {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    .no-result::before {
+      content: "Mobile";
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 16px;
+      opacity: 0.3;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    .footer a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .info a {
+      color: #ff4500; /* Light mode */
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    [data-theme="dark"] .info a {
+      color: #ff5722 !important; /* Dark mode */
+    }
+    .info a:hover {
+      color: #e03e00;
+    }
+    [data-theme="dark"] .info a:hover {
+      color: #ff8a65 !important;
+    }
+    #priceRangeSection {
+  animation: fadeIn 1s ease-out;
+}
+
+    @media (max-width: 768px) {
+  .card-content { 
+    flex-direction: column; 
+    gap: 16px;               /* adds space between image and text */
+  }
+
+  .phone-image { 
+    order: -1; 
+    align-self: center;      /* keeps image centered */
+    margin-bottom: 0; 
+  }
+
+  .phone-image img { 
+    max-width: 80px; 
+    max-height: 100px;
+  }
+
+  .logo { max-width: 220px; }
+
+  /* ---- PREVENT OVERLAP: Push text down so badge doesn't touch image ---- */
+  .text-content {
+    margin-top: 28px;        /* creates gap under badge + "Phone Speed" */
+  }
+
+  /* Badge & label stay centered and visible */
+  .speed-badge {
+    top: -22px;
+    width: 44px;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .speed-label {
+    top: 26px;
+    font-size: 0.72rem;
+  }
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* -------------------------------------------------
+     SPEED BADGE – orange circle + “Phone Speed” label
+     ------------------------------------------------- */
+  .speed-badge {
+    position: absolute;
+    top: -22px;                     /* sits above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px; height: 48px;
+    background: #ff511a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    z-index: 10;
+  }
+  .speed-label {
+    position: absolute;
+    top: 30px;                      /* between badge and “Last Updated” */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.78rem;
+    color: var(--text-light);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .card-wrapper { position: relative; }   /* needed for absolute positioning */
+
+  /* NEW: SORT BUTTONS (Price & Speed) */
+  #sortControls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 16px auto;
+  }
+  .sort-btn {
+    padding: 10px 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    color: var(--text);
+  }
+  .sort-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    border-color: var(--accent);
+  }
+  .sort-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+    /* Remove ALL shake */
+    * { animation-duration: 0s !important; }
+
+    /* === CHIPSET SELECT STYLES === */
+    .chipset-select {
+      padding: 10px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor598: pointer;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 32px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,9 12,15 18,9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+
+      color: #fe5218 ;
+    }
+
+    .chipset-select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(255, 69, 0, 0.2);
+    }
+
+    .chipset-select option {
+      background: #fe5218;
+      color: white;
+    }
+
+    .chipset-select.selected {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="theme-toggle" id="themeToggle"></div>
+
+  <!-- Hidden H1 for SEO -->
+  <h1 style="position:absolute; left:-9999px; width:1px; height:1px;">KotoTaka – Cheapest Mobile Phone Prices in Bangladesh</h1>
+
+  <div style="text-align:center; margin-bottom:10px;">
+    <img src="https://i.ibb.co.com/RT56M0kK/KotoTaka.png" alt="Phone Price Finder Logo" class="logo">
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" placeholder="🔎 মামা, ফোন খুঁজছো নাকি? এখানে সার্চ করো।">
+    <span id="clearSearch" class="clear-btn" title="Clear">ঘষা দেও  </span>
+    <div id="autocomplete"></div>
+  </div>
+
+  <div id="brandCards"></div>
+
+  <div id="priceRangeSection" style="display: none;">
+  <h3 class="price-range-title">তোমার ব্যাংক অ্যাকাউন্টের পরামর্শ অনুযায়ী রেঞ্জ সিলেক্ট করো।</h3>
+  <div id="priceRangeCards"></div>
+</div>
+
+  <!-- REPLACED: old sortBtn -->
+  <div id="sortControls" style="display: none;">
+    <button id="sortPriceBtn" class="sort-btn active">কম দামী আগে দেখাবা</button>
+    <button id="sortSpeedBtn" class="sort-btn">ফাস্ট ফোন আগে দেখাবা</button>
+  </div>
+
+  <ul id="results"></ul>
+
+    <!-- FAQ SECTION -->
+  <div id="faqSection" class="faq-container">
+    <div class="faq-bar" id="faqBar">
+      <span>প্রায়ই মানুষ যে প্রশ্নগুলো করতে করতে ক্লান্ত করে ফেলে</span>
+      <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6,9 12,15 18,9"></polyline>
+      </svg>
+    </div>
+    <div class="faq-content" id="faqContent">
+      <div class="faq-item">
+        <div class="faq-question">কতোটাকা এর কাজ কী??</div>
+        <div class="faq-answer">সহজভাবে বললে, আমরা খুঁজে দিই কোন দোকানে মোবাইলটা সবচেয়ে কম দামে মিলবে। তুমি যেন দামে ঠকো না, সেটাই আমাদের কাজ। দামগুলো প্রতিদিন টাটকা করা হয়!</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">দাম কতটুকু বিশ্বাসযোগ্য?</div>
+        <div class="faq-answer">দোকান থেকেই দাম তুলি, মানে একদম মাঠপর্যায়ের রিপোর্টিং! তবুও কেনার আগে দোকানে একবার জেনে নেওয়াই বুদ্ধিমানের কাজ। শেষ কথা দোকানেরই।</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">ওয়ারেন্টি পাবো নাকি শুধু আশা?</div>
+        <div class="faq-answer">যেখানে ওয়ারেন্টি আছে, সেখানে পরিষ্কার উল্লেখ থাকে। বেশিরভাগ দোকান অন্তত এক সপ্তাহের শান্তি দেয়।</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">এত দোকান, কোনটা থেকে কিনব?</div>
+        <div class="faq-answer">দুইটা জিনিস দেখো - দাম আর দূরত্ব। যে দোকান কমে দিচ্ছে আর কাছেই আছে, সেইটাই বিজয়ী!</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Phone Speed টা বুঝায় দেও তো মামা।</div>
+        <div class="faq-answer">ফোনের স্পিড স্কোর হলো একটি সংখ্যা যা দেখায় এই যুগে ফোন কত দ্রুত কাজ করতে পারে। আমরা AnTuTu, Geekbench আর 3DMark ব্যবহার করে AI দিয়ে কাস্টম একটা স্কোর বের করেছি, তাদের জন্য যারা ভিন্ন চিপ এর নাম দেখে বুঝতে পারে না যে এটা ভালো নাকি ঔটা ভালো। দেখো তুমি ফোনে কী করছ: হেভি গেমিং = ৮০+, মোটামুটি একটু পাবজি গেমিং = ৪০+, মিডিয়াম কাজ = ৩০+, এমনি সোশ্যাল মিডিয়া = ২৫+, ল্যাগ + ইউটিউব = ১৫+, ল্যাগ + কল = ১০+।</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="text-decoration: none; color: #55555587;">
+    <p>
+      Practice project by 
+      <a href="https://www.facebook.com/arefinbee" target="_blank">Arefin Bashar Arif</a> and 
+      <a href="https://www.facebook.com/rakibtnt69" target="_blank">MD Rakib Islam</a>. Contributed by <a href="https://www.linkedin.com/in/naimurhasanrwd/" target="_blank">Naimur Hasan</a>.
+    </p>
+  </footer>
+
+  <script>
+    // DYNAMIC SEO META UPDATE
+    function updatePageMeta(titleSuffix, description) {
+      document.title = `${titleSuffix} – KotoTaka`;
+      let desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.content = description;
+      else {
+        desc = document.createElement('meta');
+        desc.name = "description";
+        desc.content = description;
+        document.head.appendChild(desc);
+      }
+    }
+
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (theme) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('KotoTaka-theme', theme);
+    };
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+    const savedTheme = localStorage.getItem('KotoTaka-theme');
+    if (savedTheme) setTheme(savedTheme);
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+
+    // Skeleton
+    function showSkeleton(count = 5) {
+      const results = document.getElementById('results');
+      results.innerHTML = Array(count).fill().map(() => `
+        <li><div class="skeleton"></div></li>
+      `).join('');
+    }
+    showSkeleton();
+
+    const sheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiaF5cAeBXlMhKwsmjVQ4-hWQzG2-npQZk7oMUoKC6IyaXu5HvIQ00PunSqjNbyCRKgz97c-Ty23x8/pub?output=csv";
+    let phones = [], brands = [], currentBrand = null, currentPriceRange = null, currentChipset = null;
+    let sortPriceMode = 'asc', sortSpeedMode = 'asc'; // NEW
+
+    const brandMergeMap = {
+      'Motorola': ['Motorola', 'Motorola Edge'],
+      'Xiaomi': ['Xiaomi', 'Xiaomi Poco', 'Xiaomi Redmi']
+    };
+
+    function parseCSV(text) {
+      const lines = text.trim().split('\n');
+      const headers = lines.shift().split(',');
+      return lines.map(line => {
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+        for (let char of line) {
+          if (char === '"' || char === "'") inQuotes = !inQuotes;
+          else if (char === ',' && !inQuotes) { values.push(current.trim()); current = ''; }
+          else current += char;
+        }
+        values.push(current.trim());
+        const obj = {};
+        headers.forEach((h, i) => obj[h.trim()] = values[i] || "");
+        return obj;
+      });
+    }
+
+    fetch(sheetCsvUrl)
+      .then(res => res.text())
+      .then(csvText => {
+        const data = parseCSV(csvText);
+        phones = data.map(r => {
+          const brand = r.BRANDS?.trim() || '';
+          const series = r.SERIES ? r.SERIES.trim() : '';
+          const model = r.MODEL?.trim() || '';
+          const sourceUrl = r.SOURCE ? r.SOURCE.trim().replace(/^"|"$/g, '') : '';
+          const imageUrl = r.IMAGE ? r.IMAGE.trim() : '';
+          const region = r.REGION ? r.REGION.trim() : '';
+          const searchWords = (brand + " " + series + " " + model).toLowerCase().split(/\s+/);
+          return {
+            brand, series, model,
+            name: (brand + series + " " + model).trim(),
+            searchWords,
+            price: r['CHEAPEST PRICE'] || 'N/A',
+            shop: r.SHOP || 'N/A',
+            info: { 
+              ram: r['RAM/STORAGE'] || '', 
+              sim: r.SIM || '', 
+              chipset: r.VARIANT || '', 
+              region: r.REGION || '', 
+              lastUpdatedPrice: r['LAST UPDATED'] || 'N/A', 
+              source: sourceUrl, 
+              warranty: r['WITH WARRANTY'] || '', 
+              warrantyShop: r['WARRANTY SHOP'] || '', 
+              image: imageUrl,
+              score: r.SCORE || ''               // <-- NEW LINE
+            }
+          };
+        }).filter(p => p.brand);
+
+        // Brand Counts
+        const brandCounts = {};
+        phones.forEach(p => {
+          let key = p.brand;
+          for (const [merged, originals] of Object.entries(brandMergeMap)) {
+            if (originals.includes(p.brand)) { key = merged; break; }
+          }
+          brandCounts[key] = (brandCounts[key] || 0) + 1;
+        });
+
+        const brandSet = new Set(phones.map(p => p.brand));
+        const mergedBrands = [];
+        Object.keys(brandMergeMap).forEach(key => {
+          if (brandMergeMap[key].some(b => brandSet.has(b))) mergedBrands.push(key);
+        });
+        brandSet.forEach(b => {
+          if (!Object.values(brandMergeMap).flat().includes(b)) mergedBrands.push(b);
+        });
+
+        brands = mergedBrands.sort((a,b) => a.localeCompare(b));
+        renderBrandCards(brandCounts);
+        renderPriceRangeCards();
+        document.getElementById('priceRangeSection').style.display = 'block';
+        document.getElementById('results').innerHTML = '';
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        document.getElementById('results').innerHTML = '<li class="no-result">Failed to load data.</li>';
+      });
+
+    const searchInput = document.getElementById('search');
+    const clearBtn = document.getElementById('clearSearch');
+    const autocompleteDiv = document.getElementById('autocomplete');
+    const results = document.getElementById('results');
+    const brandCardsDiv = document.getElementById('brandCards');
+    const priceRangeCardsDiv = document.getElementById('priceRangeCards');
+    const sortControls = document.getElementById('sortControls'); // NEW
+    const sortPriceBtn = document.getElementById('sortPriceBtn'); // NEW
+    const sortSpeedBtn = document.getElementById('sortSpeedBtn'); // NEW
+
+    function renderBrandCards(counts) {
+      brandCardsDiv.innerHTML = '';
+      brands.forEach(brand => {
+        if (!brand) return;
+        const card = document.createElement('div');
+        card.classList.add('brand-card');
+        const count = counts[brand] || 0;
+        card.innerHTML = `${brand} <span class="brand-badge">${count}</span>`;
+        card.addEventListener('click', () => { 
+          currentBrand = brand; currentPriceRange = null; currentChipset = null;
+          showBrand(brand); highlightSelectedCard(card); 
+          document.querySelectorAll('.price-card, .chipset-select').forEach(c => c.classList.remove('selected'));
+          updatePageMeta(`${brand} Phones`, `Cheapest ${brand} prices in Bangladesh from local shops. Updated daily.`);
+        });
+        brandCardsDiv.appendChild(card);
+      });
+
+      // === ADD CHIPSET DROPDOWN BUTTON AT THE END ===
+      const chipsetSelect = document.createElement('select');
+      chipsetSelect.className = 'brand-card chipset-select';
+      chipsetSelect.innerHTML = '<option value="" disabled selected>Chipset</option>' +
+        [
+          "Snapdragon 8 Elite Gen 5", "Snapdragon 8 Elite", "Snapdragon 8s Gen 4", "Snapdragon 8 Gen 3", "Snapdragon 8s Gen 3",
+          "Snapdragon 8 Gen 2", "Snapdragon 8+ Gen 1", "Snapdragon 8 Gen 1", "Snapdragon 888+", "Snapdragon 888",
+          "Snapdragon 870", "Snapdragon 7 Gen 4", "Snapdragon 7+ Gen 3", "Snapdragon 7 Gen 3", "Snapdragon 7+ Gen 2",
+          "Snapdragon 7s Gen 4", "Snapdragon 7s Gen 3", "Snapdragon 782G", "Snapdragon 7 Gen 1", "Snapdragon 778G+",
+          "Snapdragon 778G", "Snapdragon 780G", "Snapdragon 768G", "Snapdragon 765", "Snapdragon 750G",
+          "Snapdragon 7s Gen 2", "Snapdragon 6s Gen 3", "Snapdragon 6 Gen 4", "Snapdragon 6 Gen 3", "Snapdragon 695",
+          "Snapdragon 6 Gen 1", "Snapdragon 690", "Snapdragon 685", "Snapdragon 680", "Snapdragon 4s Gen 2",
+          "Snapdragon 4 Gen 2", "Snapdragon 4 Gen 1", "Snapdragon 480+", "Snapdragon 480",
+          "Dimensity 9500", "Dimensity 9400+", "Dimensity 9400", "Dimensity 9350+", "Dimensity 9300+",
+          "Dimensity 9300", "Dimensity 9200+", "Dimensity 9200", "Dimensity 9000+", "Dimensity 9000",
+          "Dimensity 8450", "Dimensity 8400", "Dimensity 8350", "Dimensity 8300", "Dimensity 8200",
+          "Dimensity 8100", "Dimensity 8000", "Dimensity 7400", "Dimensity 7360", "Dimensity 7300+",
+          "Dimensity 7200", "Dimensity 7050", "Dimensity 7030", "Dimensity 7025", "Dimensity 7020",
+          "Dimensity 1300", "Dimensity 1200", "Dimensity 1100", "Dimensity 1080", "Dimensity 1050",
+          "Dimensity 920", "Dimensity 900", "Dimensity 810", "Dimensity 800U", "Dimensity 700",
+          "Dimensity 6400", "Dimensity 6300", "Dimensity 6100+", "Helio G100 Ultra", "Helio G99",
+          "Helio G96", "Helio G91", "Helio G88", "Helio G85", "Helio G81", "Helio G70", "Helio G36",
+          "Apple A19 Pro", "Apple A19", "Apple A18 Pro", "Apple A18", "Apple A17 Pro", "Apple A17",
+          "Apple A16", "Apple A15", "Apple A14", "Exynos 2500", "Exynos 2400e", "Exynos 2400",
+          "Exynos 2200", "Exynos 2100", "Exynos 1580", "Exynos 1480", "Exynos 1380", "Exynos 1330",
+          "Exynos 1280", "Exynos 1080", "Tensor G5", "Tensor G4", "Tensor G3", "Tensor G2",
+          "Kirin 9020", "Kirin 9000s", "Kirin 9000", "Unisoc T7520", "Unisoc T770", "Unisoc T7250", "Unisoc T618"
+        ].map(chip => `<option value="${chip}">${chip}</option>`).join('');
+
+      chipsetSelect.addEventListener('change', function() {
+        const selectedChipset = this.value;
+        currentChipset = selectedChipset;
+        currentBrand = null;
+        currentPriceRange = null;
+        document.querySelectorAll('.brand-card, .price-card').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        filterByChipset(selectedChipset);
+        updatePageMeta(`${selectedChipset} Phones`, `Cheapest phones with ${selectedChipset} in Bangladesh.`);
+      });
+
+      brandCardsDiv.appendChild(chipsetSelect);
+    }
+
+    function renderPriceRangeCards() {
+      const ranges = [
+        [5000, 10000],
+        [10000, 20000],
+        [20000, 30000],
+        [30000, 40000],
+        [40000, 50000],
+        [50000, 60000],
+        [60000, 80000],
+        [80000, 100000],
+        [100000, Infinity]
+      ];
+
+      priceRangeCardsDiv.innerHTML = '';
+      ranges.forEach(([min, max]) => {
+        const label = max === Infinity ? '100K+' : `${min/1000}K-${max/1000}K`;
+        const card = document.createElement('div');
+        card.className = 'price-card';
+        card.textContent = label;
+        card.dataset.min = min;
+        card.dataset.max = max;
+        card.addEventListener('click', () => {
+          currentPriceRange = [min, max];
+          currentBrand = null;
+          currentChipset = null;
+          document.querySelectorAll('.price-card').forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          document.querySelectorAll('.brand-card, .chipset-select').forEach(c => c.classList.remove('selected'));
+          filterByPrice(min, max);
+          updatePageMeta(`${label} Phones`, `Phones between ${label} in Bangladesh – lowest prices from local shops.`);
+        });
+        priceRangeCardsDiv.appendChild(card);
+      });
+    }
+
+    function highlightSelectedCard(selectedCard) {
+      document.querySelectorAll('.brand-card').forEach(c => c.classList.remove('selected'));
+      selectedCard.classList.add('selected');
+    }
+
+    function highlightDiffs(variants) {
+      const fields = ['price','shop','ram','sim','chipset','source','warranty','warrantyShop','region'];
+      const diffs = {};
+      fields.forEach(f => {
+        const values = variants.map(v => f in v.info ? v.info[f] : v[f]);
+        diffs[f] = new Set(values).size > 1;
+      });
+      return diffs;
+    }
+
+    function showAllVariants(variants) {
+      results.innerHTML = '';
+      if (!variants.length) {
+        results.innerHTML = '<li class="no-result">কোনো ফোন পাওয়া যায়নি।</li>';
+        return;
+      }
+      const diffs = highlightDiffs(variants);
+
+      variants.forEach((phone, i) => {
+        setTimeout(() => {
+          const li = document.createElement('li');
+          li.className = 'card-wrapper';
+
+          const sourceHTML = phone.info.source && phone.info.source.startsWith('http')
+            ? `<a href="${phone.info.source}" target="_blank" class="${diffs.source?'highlight':''}">LINK</a>`
+            : 'N/A';
+
+          const warrantyHTML   = phone.info.warranty   ? `🛡️ Warranty Info: <span class="${diffs.warranty?'highlight':''}">${phone.info.warranty}</span><br>` : '';
+          const warrantyShopHTML = phone.info.warrantyShop ? `Warranty Shop: <span class="${diffs.warrantyShop?'highlight':''}">${phone.info.warrantyShop}</span><br>` : '';
+          const regionHTML     = phone.info.region     ? `🌎 Region: <span class="${diffs.region?'highlight':''}">${phone.info.region}</span><br>` : '';
+
+          const score = phone.info.score?.trim();
+
+          li.innerHTML = `
+            ${score ? `
+              <div class="speed-badge">${score}</div>
+              <div class="speed-label">Phone Speed</div>
+            ` : ''}
+
+            <div class="card-content">
+              <div class="text-content">
+                <strong>📱 ${phone.name}</strong>
+                <div class="shop">💰 Price: <span class="${diffs.price?'highlight':''}">${phone.price}</span> Taka | 🛍️ দোকান: <span class="${diffs.shop?'highlight':''}">${phone.shop}</span></div>
+                <div class="info">
+                  ⚙️ RAM/Storage: <span class="${diffs.ram?'highlight':''}">${phone.info.ram}</span><br>
+                  📶 SIM: <span class="${diffs.sim?'highlight':''}">${phone.info.sim}</span><br>
+                  🧠 Chipset: <span class="${diffs.chipset?'highlight':''}">${phone.info.chipset}</span><br>
+                  ${regionHTML}🔗 Source: ${sourceHTML}<br>
+                  ${warrantyHTML}${warrantyShopHTML}
+                </div>
+              </div>
+              ${phone.info.image ? `<div class="phone-image"><img src="${phone.info.image}" alt="${phone.name}" loading="lazy"></div>` : ''}
+            </div>
+
+            <div class="footer-info">Last Updated: ${phone.info.lastUpdatedPrice}</div>
+          `;
+
+          results.appendChild(li);
+        }, i * 50);
+      });
+    }
+
+    function applySort(phonesList) {
+      return phonesList.sort((a, b) => {
+        // Primary: Speed
+        if (sortSpeedBtn.classList.contains('active')) {
+          const scoreA = parseInt(a.info.score) || 0;
+          const scoreB = parseInt(b.info.score) || 0;
+          const diff = sortSpeedMode === 'asc' ? scoreA - scoreB : scoreB - scoreA;
+          if (diff !== 0) return diff;
+        }
+        // Secondary: Price
+        const priceA = parseInt(a.price.replace(/\D/g, '')) || 0;
+        const priceB = parseInt(b.price.replace(/\D/g, '')) || 0;
+        return sortPriceMode === 'asc' ? priceA - priceB : priceB - priceA;
+      });
+    }
+
+    function showBrand(brandName) {
+      currentBrand = brandName;
+      sortControls.style.display = 'flex';
+      let brandPhones = brandMergeMap[brandName] ?
+        phones.filter(p => brandMergeMap[brandName].includes(p.brand)) :
+        phones.filter(p => p.brand.toLowerCase() === brandName.toLowerCase());
+
+      showAllVariants(applySort(brandPhones));
+    }
+
+    function filterByPrice(min, max) {
+      sortControls.style.display = 'flex';
+      let filtered = phones.filter(p => {
+        const price = parseInt(p.price.replace(/\D/g, '')) || 0;
+        return price >= min && (max === Infinity || price < max);
+      });
+      showAllVariants(applySort(filtered));
+    }
+
+    function filterByChipset(chipset) {
+      sortControls.style.display = 'flex';
+      let filtered = phones.filter(p => 
+        p.info.chipset && p.info.chipset.trim() === chipset
+      );
+      showAllVariants(applySort(filtered));
+    }
+
+    // NEW: Sort Button Listeners
+    sortPriceBtn.addEventListener('click', () => {
+      sortPriceMode = sortPriceMode === 'asc' ? 'desc' : 'asc';
+      sortPriceBtn.textContent = `Price: ${sortPriceMode === 'asc' ? 'কম দামী আগে দেখাবা' : 'বেশী দামী আগে দেখাবা'}`;
+      sortPriceBtn.classList.add('active');
+      sortSpeedBtn.classList.remove('active');
+      if (currentBrand) showBrand(currentBrand);
+      else if (currentPriceRange) filterByPrice(...currentPriceRange);
+      else if (currentChipset) filterByChipset(currentChipset);
+      else if (searchInput.value) searchInput.dispatchEvent(new Event('input'));
+    });
+
+    sortSpeedBtn.addEventListener('click', () => {
+      sortSpeedMode = sortSpeedMode === 'asc' ? 'desc' : 'asc';
+      sortSpeedBtn.textContent = `Speed: ${sortSpeedMode === 'asc' ? 'স্লো ফোন আগে দেখাবা' : 'ফাস্ট ফোন আগে দেখাবা'}`;
+      sortSpeedBtn.classList.add('active');
+      sortPriceBtn.classList.remove('active');
+      if (currentBrand) showBrand(currentBrand);
+      else if (currentPriceRange) filterByPrice(...currentPriceRange);
+      else if (currentChipset) filterByChipset(currentChipset);
+      else if (searchInput.value) searchInput.dispatchEvent(new Event('input'));
+    });
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      autocompleteDiv.innerHTML = '';
+      results.innerHTML = '';
+      sortControls.style.display = 'none';
+      currentBrand = null;
+      currentPriceRange = null;
+      currentChipset = null;
+      document.querySelectorAll('.brand-card, .price-card, .chipset-select').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.chipset-select').forEach(s => {
+        s.selectedIndex = 0;
+      });
+      sortPriceBtn.classList.add('active');
+      sortSpeedBtn.classList.remove('active');
+      sortPriceMode = 'asc';
+      sortSpeedMode = 'asc';
+      sortPriceBtn.textContent = 'কম দামী আগে দেখাবা';
+      sortSpeedBtn.textContent = 'স্লো ফোন আগে দেখাবা';
+      document.title = "KotoTaka – Cheapest Mobile Phone Prices in Bangladesh";
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.content = "Find the lowest prices for Samsung, Xiaomi, iPhone, Realme & more from local shops in Bangladesh. Updated daily.";
+    });
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      clearBtn.style.display = query ? 'block' : 'none';
+      autocompleteDiv.innerHTML = '';
+      results.innerHTML = '';
+      sortControls.style.display = query ? 'flex' : 'none';
+      currentBrand = null;
+      currentPriceRange = null;
+      currentChipset = null;
+      document.querySelectorAll('.brand-card, .price-card, .chipset-select').forEach(c => c.classList.remove('selected'));
+      if (!query || !phones.length) return;
+
+      const queryWords = query.split(/\s+/);
+      const filtered = phones.filter(p =>
+        queryWords.every(q => p.searchWords.some(w => w.startsWith(q)))
+      );
+      const uniqueNames = [...new Set(filtered.map(p => p.name))];
+      uniqueNames.forEach(name => {
+        const div = document.createElement('div');
+        div.classList.add('autocomplete-item');
+        div.textContent = name;
+        div.addEventListener('click', () => {
+          searchInput.value = name;
+          clearBtn.style.display = 'block';
+          autocompleteDiv.innerHTML = '';
+          let searchResults = filtered.filter(p => p.name === name);
+          showAllVariants(applySort(searchResults));
+          updatePageMeta(name, `Latest price for ${name} in Bangladesh from local shops.`);
+        });
+        autocompleteDiv.appendChild(div);
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (e.target !== searchInput && !autocompleteDiv.contains(e.target))
+        autocompleteDiv.innerHTML = '';
+    });
+    
+  </script>
+  <script src="script.js"></script> 
+
+</body>
+>>>>>>> c4bbe91a3844da30f4619e79c9ca4241ad4bf7ee
 </html>
