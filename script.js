@@ -24,4 +24,3 @@
         faqBar.classList.remove('active');
       }
     });
-

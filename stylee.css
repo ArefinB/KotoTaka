@@ -54,7 +54,7 @@
     .faq-content.open {
       max-height: 200vh;
       padding: 20px;
-      border: 1px solid var(--border);     /* <-- real border only when open */
+      border: 1px solid var(--border);     /* <-- real border only when open ok */
       border-top: 1px solid var(--border);
     }
 
