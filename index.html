@@ -103,7 +103,7 @@
     /* Theme Toggle */
     .theme-toggle {
       position: absolute;
-      top: 16 16px;
+      top: 16px 16px;
       right: 16px;
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -695,7 +695,9 @@
     <button id="sortSpeedBtn" class="sort-btn">ফাস্ট ফোন আগে দেখাবা</button>
   </div>
 
-  <ul id="results"></ul>
+  <!-- RESULTS WITH PAGINATION -->
+<ul id="results"></ul>
+<div id="pagination" style="display: none; justify-content: center; margin: 20px 0; gap: 10px; flex-wrap: wrap;"></div>
 
     <!-- FAQ SECTION -->
   <div id="faqSection" class="faq-container">
@@ -777,6 +779,31 @@
     const sheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiaF5cAeBXlMhKwsmjVQ4-hWQzG2-npQZk7oMUoKC6IyaXu5HvIQ00PunSqjNbyCRKgz97c-Ty23x8/pub?output=csv";
     let phones = [], brands = [], currentBrand = null, currentPriceRange = null, currentChipset = null;
     let sortPriceMode = 'asc', sortSpeedMode = 'asc'; // NEW
+
+    // ————————————————————————————————————————
+// MOBILE-ONLY SCROLL JANK FIX (Safe & Working)
+// Only wrap renderBrandCards — NOT price range
+// ————————————————————————————————————————
+if (window.innerWidth <= 768) {
+  let isRendering = false;
+  const safeRender = (fn) => {
+    if (isRendering) return;
+    isRendering = true;
+    requestAnimationFrame(() => {
+      fn();
+      isRendering = false;
+    });
+  };
+
+  // Only wrap brand cards (dynamic)
+  const originalRenderBrand = renderBrandCards;
+  renderBrandCards = function(...args) {
+    safeRender(() => originalRenderBrand(...args));
+  };
+
+  // DO NOT wrap renderPriceRangeCards — it breaks!
+  // Leave it untouched
+}
 
     const brandMergeMap = {
       'Motorola': ['Motorola', 'Motorola Edge'],
@@ -985,57 +1012,211 @@
       return diffs;
     }
 
-    function showAllVariants(variants) {
-      results.innerHTML = '';
-      if (!variants.length) {
-        results.innerHTML = '<li class="no-result">কোনো ফোন পাওয়া যায়নি।</li>';
-        return;
+    let currentPage = 1;
+const resultsPerPage = 10;
+
+function showAllVariants(variants) {
+  if (!variants.length) {
+    results.innerHTML = '<li class="no-result">কোনো ফোন পাওয়া যায়নি।</li>';
+    document.getElementById('pagination').style.display = 'none';
+    return;
+  }
+
+  // Group by phone name
+  const phoneMap = {};
+  variants.forEach(phone => {
+    const key = phone.name;
+    if (!phoneMap[key]) phoneMap[key] = [];
+    phoneMap[key].push(phone);
+  });
+
+  const groupedPhones = Object.values(phoneMap);
+  const RESULTS_PER_PAGE = 10;
+  let currentPage = 1;
+  const totalPages = Math.ceil(groupedPhones.length / RESULTS_PER_PAGE);
+
+  function renderPage(page) {
+  results.innerHTML = '';
+  const start = (page - 1) * RESULTS_PER_PAGE;
+  const end = start + RESULTS_PER_PAGE;
+  const pageItems = groupedPhones.slice(start, end);
+
+  pageItems.forEach(group => {
+    const defaultVariant = group[0];
+    const li = document.createElement('li');
+    li.className = 'card-wrapper variant-card';
+
+    // === BUILD OTHER VARIANT BUTTONS ===
+    function buildVariantButtons(current, group) {
+  const others = group.filter(v => v !== current);
+  if (others.length === 0) return '';
+
+  return others.map(v => {
+    const diff = [];
+
+    if (v.info.ram !== current.info.ram) diff.push(v.info.ram);
+    if (v.info.sim !== current.info.sim) diff.push(v.info.sim);
+    if (v.info.chipset !== current.info.chipset) diff.push(v.info.chipset);
+    if (v.info.region !== current.info.region) diff.push(v.info.region);
+
+    const label = diff.length > 0 ? diff.join(' • ') : 'Other';
+
+    const key = `${v.info.ram}-${v.info.sim}-${v.info.chipset}-${v.info.region}`;
+
+    return `
+      <button class="variant-btn" 
+              data-variant-id="${key}"
+              style="background: #d32f2f; color: white; margin: 4px; padding: 6px 10px; border-radius: 20px; font-size: 0.8rem; border: none; cursor: pointer;">
+        ${label}
+      </button>
+    `;
+  }).join('');
+}
+
+    const sourceHTML = defaultVariant.info.source?.startsWith('http')
+      ? `<a href="${defaultVariant.info.source}" target="_blank" class="highlight">LINK</a>`
+      : 'N/A';
+
+    const score = defaultVariant.info.score?.trim();
+
+    li.innerHTML = `
+  ${score ? `<div class="speed-badge">${score}</div><div class="speed-label">Phone Speed</div>` : ''}
+  <div class="card-content">
+    <div class="text-content">
+      <strong class="phone-title">📱 ${defaultVariant.name}</strong>
+      ${group.length > 1 ? `<div class="variant-buttons">${buildVariantButtons(defaultVariant, group)}</div>` : ''}
+      <div class="shop">Price: <span class="price">💰 ৳${defaultVariant.price}</span> | Shop: <span class="shop-name">${defaultVariant.shop}</span></div>
+      <div class="info">
+        ⚙️ RAM/Storage: <span class="ram">${defaultVariant.info.ram}</span><br>
+        📶 SIM: <span class="sim">${defaultVariant.info.sim}</span><br>
+        🧠 Chipset: <span class="chipset">${defaultVariant.info.chipset}</span><br>
+        🌎 Region: <span class="region">${defaultVariant.info.region}</span><br>
+        🔗 Source: ${sourceHTML}<br>
+        ${defaultVariant.info.warranty ? `🛡️ Warranty Info: <span class="warranty">${defaultVariant.info.warranty}</span><br>` : ''}
+        ${defaultVariant.info.warrantyShop ? `Warranty Shop: <span class="warranty-shop">${defaultVariant.info.warrantyShop}</span><br>` : ''}
+      </div>
+    </div>
+    ${defaultVariant.info.image ? `<div class="phone-image"><img data-src="${defaultVariant.info.image}" alt="${defaultVariant.name}" loading="lazy"></div>` : ''}
+  </div>
+  <div class="footer-info">Last Updated: <span class="last-updated">${defaultVariant.info.lastUpdatedPrice}</span></div>
+`;
+
+    // === EVENT DELEGATION: ONE LISTENER FOR ALL BUTTONS ===
+    li.addEventListener('click', (e) => {
+      const btn = e.target.closest('.variant-btn');
+      if (!btn) return;
+
+      const variantKey = btn.dataset.variantId;
+      const selected = group.find(v => 
+        `${v.info.ram}-${v.info.sim}-${v.info.chipset}-${v.info.region}` === variantKey
+      );
+
+      if (!selected) return;
+
+      // Update card
+      li.querySelector('.price').textContent = `৳${selected.price}`;
+      li.querySelector('.shop-name').textContent = selected.shop;
+      li.querySelector('.ram').textContent = selected.info.ram;
+      li.querySelector('.sim').textContent = selected.info.sim;
+      li.querySelector('.chipset').textContent = selected.info.chipset;
+      li.querySelector('.region').textContent = selected.info.region;
+      li.querySelector('.last-updated').textContent = selected.info.lastUpdatedPrice;
+
+      const sourceLink = selected.info.source?.startsWith('http')
+        ? `<a href="${selected.info.source}" target="_blank" class="highlight">LINK</a>`
+        : 'N/A';
+      const warrantyHTML = selected.info.warranty ? `🛡️ Warranty Info: <span class="warranty">${selected.info.warranty}</span><br>` : '';
+const warrantyShopHTML = selected.info.warrantyShop ? `Warranty Shop: <span class="warranty-shop">${selected.info.warrantyShop}</span><br>` : '';
+const sourceLinkHTML = selected.info.source?.startsWith('http')
+  ? `<a href="${selected.info.source}" target="_blank" class="highlight">LINK</a>`
+  : 'N/A';
+
+li.querySelector('.info').innerHTML = `
+  ⚙️ RAM/Storage: <span class="ram">${selected.info.ram}</span><br>
+  📶 SIM: <span class="sim">${selected.info.sim}</span><br>
+  🧠 Chipset: <span class="chipset">${selected.info.chipset}</span><br>
+  🌎 Region: <span class="region">${selected.info.region}</span><br>
+  🔗 Source: ${sourceLinkHTML}<br>
+  ${warrantyHTML}${warrantyShopHTML}
+`.trim();
+
+      // Update image
+      const img = li.querySelector('.phone-image img');
+      if (img && selected.info.image) {
+        img.dataset.src = selected.info.image;
+        img.src = selected.info.image;
       }
-      const diffs = highlightDiffs(variants);
 
-      variants.forEach((phone, i) => {
-        setTimeout(() => {
-          const li = document.createElement('li');
-          li.className = 'card-wrapper';
+      // Update speed badge
+      const badge = li.querySelector('.speed-badge');
+      const label = li.querySelector('.speed-label');
+      const newScore = selected.info.score?.trim();
+      if (newScore && badge) {
+        badge.textContent = newScore;
+        badge.style.display = 'flex';
+        label.style.display = 'block';
+      } else if (badge) {
+        badge.style.display = 'none';
+        label.style.display = 'none';
+      }
 
-          const sourceHTML = phone.info.source && phone.info.source.startsWith('http')
-            ? `<a href="${phone.info.source}" target="_blank" class="${diffs.source?'highlight':''}">LINK</a>`
-            : 'N/A';
+      // === REBUILD BUTTONS (exclude current) ===
+      const buttonsContainer = li.querySelector('.variant-buttons');
+if (group.length > 1) {
+  if (!buttonsContainer) {
+    const textContent = li.querySelector('.text-content');
+    const shopDiv = textContent.querySelector('.shop');
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.className = 'variant-buttons';
+    textContent.insertBefore(buttonsDiv, shopDiv);
+  }
+  li.querySelector('.variant-buttons').innerHTML = buildVariantButtons(selected, group);
+} else {
+  if (buttonsContainer) buttonsContainer.remove();
+}
+    });
 
-          const warrantyHTML   = phone.info.warranty   ? `🛡️ Warranty Info: <span class="${diffs.warranty?'highlight':''}">${phone.info.warranty}</span><br>` : '';
-          const warrantyShopHTML = phone.info.warrantyShop ? `Warranty Shop: <span class="${diffs.warrantyShop?'highlight':''}">${phone.info.warrantyShop}</span><br>` : '';
-          const regionHTML     = phone.info.region     ? `🌎 Region: <span class="${diffs.region?'highlight':''}">${phone.info.region}</span><br>` : '';
+    results.appendChild(li);
+  });
 
-          const score = phone.info.score?.trim();
+  // === PAGINATION (unchanged) ===
+  const pagination = document.getElementById('pagination');
+  pagination.innerHTML = '';
+  pagination.style.display = 'flex';
 
-          li.innerHTML = `
-            ${score ? `
-              <div class="speed-badge">${score}</div>
-              <div class="speed-label">Phone Speed</div>
-            ` : ''}
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'sort-btn';
+  prevBtn.textContent = 'পিছনে';
+  prevBtn.disabled = page === 1;
+  prevBtn.addEventListener('click', () => {
+    renderPage(page - 1);
+    setTimeout(scrollAfterPageChange, 50);
+  });
+  pagination.appendChild(prevBtn);
 
-            <div class="card-content">
-              <div class="text-content">
-                <strong>📱 ${phone.name}</strong>
-                <div class="shop">💰 Price: <span class="${diffs.price?'highlight':''}">${phone.price}</span> Taka | 🛍️ দোকান: <span class="${diffs.shop?'highlight':''}">${phone.shop}</span></div>
-                <div class="info">
-                  ⚙️ RAM/Storage: <span class="${diffs.ram?'highlight':''}">${phone.info.ram}</span><br>
-                  📶 SIM: <span class="${diffs.sim?'highlight':''}">${phone.info.sim}</span><br>
-                  🧠 Chipset: <span class="${diffs.chipset?'highlight':''}">${phone.info.chipset}</span><br>
-                  ${regionHTML}🔗 Source: ${sourceHTML}<br>
-                  ${warrantyHTML}${warrantyShopHTML}
-                </div>
-              </div>
-              ${phone.info.image ? `<div class="phone-image"><img src="${phone.info.image}" alt="${phone.name}" loading="lazy"></div>` : ''}
-            </div>
+  const info = document.createElement('span');
+  info.style.cssText = 'padding: 10px 16px; font-weight: 600; color: var(--text-light);';
+  info.textContent = `পেজ ${page} / ${totalPages}`;
+  pagination.appendChild(info);
 
-            <div class="footer-info">Last Updated: ${phone.info.lastUpdatedPrice}</div>
-          `;
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'sort-btn';
+  nextBtn.textContent = 'পরের পেজ';
+  nextBtn.disabled = page === totalPages;
+  nextBtn.addEventListener('click', () => {
+    renderPage(page + 1);
+    setTimeout(scrollAfterPageChange, 50);
+  });
+  pagination.appendChild(nextBtn);
 
-          results.appendChild(li);
-        }, i * 50);
-      });
-    }
+  // Lazy load
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+}
+
+  renderPage(1);
+}
 
     function applySort(phonesList) {
       return phonesList.sort((a, b) => {
@@ -1061,6 +1242,8 @@
         phones.filter(p => p.brand.toLowerCase() === brandName.toLowerCase());
 
       showAllVariants(applySort(brandPhones));
+      mobileScrollToResults();
+      if (window.innerWidth <= 768) scrollToResults();
     }
 
     function filterByPrice(min, max) {
@@ -1070,6 +1253,8 @@
         return price >= min && (max === Infinity || price < max);
       });
       showAllVariants(applySort(filtered));
+      mobileScrollToResults();
+      if (window.innerWidth <= 768) scrollToResults();
     }
 
     function filterByChipset(chipset) {
@@ -1078,6 +1263,8 @@
         p.info.chipset && p.info.chipset.trim() === chipset
       );
       showAllVariants(applySort(filtered));
+      mobileScrollToResults();
+      if (window.innerWidth <= 768) scrollToResults();
     }
 
     // NEW: Sort Button Listeners
@@ -1143,7 +1330,7 @@
       const filtered = phones.filter(p =>
         queryWords.every(q => p.searchWords.some(w => w.startsWith(q)))
       );
-      const uniqueNames = [...new Set(filtered.map(p => p.name))];
+      const uniqueNames = [...new Set(filtered.map(p => p.name))].slice(0, 10);
       uniqueNames.forEach(name => {
         const div = document.createElement('div');
         div.classList.add('autocomplete-item');
@@ -1154,6 +1341,7 @@
           autocompleteDiv.innerHTML = '';
           let searchResults = filtered.filter(p => p.name === name);
           showAllVariants(applySort(searchResults));
+          mobileScrollToResults();
           updatePageMeta(name, `Latest price for ${name} in Bangladesh from local shops.`);
         });
         autocompleteDiv.appendChild(div);

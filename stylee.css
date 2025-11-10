@@ -54,8 +54,7 @@
     .faq-content.open {
       max-height: 200vh;
       padding: 20px;
-      border: 1px solid var(--border);     /* <-- real border only when open ok */
-      border-top: 1px solid var(--border);
+      border: 1px solid var(--border);     /* <-- real border only when open ok */;
     }
 
     .faq-item {
@@ -91,4 +90,312 @@
       .faq-content.open {
         padding: 16px;
       }
+
+      .brand-card:hover, .price-card:hover, #results li:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  /* Keep FAQ transition */
+  .faq-content,
+  .faq-bar,
+  .faq-icon {
+    transition: var(--transition) !important;
+  }
+
+  .brand-card,
+  .price-card,
+  #results li,
+  .faq-bar,
+  .faq-content,
+  .sort-btn {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
+  }
+
+/* #pagination {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    padding: 8px 0;
+  }
+
+  #pagination button,
+  #pagination span {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 60px;
+    padding: 8px 12px !important;
+    font-size: 0.9rem !important;
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Optional: Make page info slightly smaller */
+  /* #pagination span {
+    flex: 0 1 auto;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--text-light);
+  }
+
+  #pagination button {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 70px !important;
+    padding: 8px 10px !important;
+    font-size: 0.85rem !important;
+  } */
+
+  /* Optional: Slightly shrink long text */
+  /* #pagination button:nth-child(3) {
+    font-size: 0.82rem !important;
+  } */ */
+
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  
+  /* Optional: Add a little "pulse" highlight when results appear */
+  #results:target {
+    animation: pulse 1.5s ease-out;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.3); }
+  50%      { box-shadow: 0 0 0 12px rgba(255, 69, 0, 0); }
+
+
+
+
+
+  
     }
+
+    #results {
+  scroll-margin-top: 100px; /* Space above results when scrolled to */
+}
+
+/* Variant Buttons Container */
+.variant-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+  justify-content: flex-start;
+}
+
+.variant-btn {
+  background: #d32f2f !important;
+  color: white !important;
+  font-size: 0.78rem !important;
+  padding: 6px 10px !important;
+  border-radius: 20px !important;
+  border: none !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.variant-btn:hover {
+  background: #b71c1c !important;
+  transform: scale(1.05);
+}
+
+.variant-btn.active {
+  background: #ff1744 !important;
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.4);
+}
+
+/* Mobile: Smaller buttons */
+@media (max-width: 768px) {
+  .variant-btn {
+    font-size: 0.72rem !important;
+    padding: 5px 8px !important;
+  }
+  .variant-buttons {
+    gap: 4px;
+  }
+}
+
+.footer-info {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+/* Mobile: Smaller */
+@media (max-width: 768px) {
+  .footer-info {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .variant-btn {
+    font-size: 1rem !important;
+    font-weight: bold;
+    background: #de5737 !important;
+    padding: 5px 8px !important;
+  }
+
+  /* MOBILE-ONLY PERFORMANCE FIX (≤768px) */
+@media (max-width: 768px) {
+  /* === 1. KILL EXPENSIVE EFFECTS ON CARDS === */
+  .brand-card,
+  .price-card,
+  .chipset-select,
+  .sort-btn {
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: background 0.18s ease, border-color 0.18s ease !important;
+    padding: 7px 12px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* === 2. HOVER → SIMPLE BG CHANGE (NO TRANSFORM) === */
+  .brand-card:hover,
+  .price-card:hover,
+  .chipset-select:hover,
+  .sort-btn:hover {
+    background: rgba(255, 69, 0, 0.15) !important;
+    border-color: var(--accent) !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* === 3. SELECTED STATE (KEEP VISUAL FEEDBACK) === */
+  .brand-card.selected,
+  .price-card.selected,
+  .chipset-select.selected,
+  .sort-btn.active {
+    background: var(--accent) !important;
+    color: white !important;
+    border-color: var(--accent) !important;
+  }
+
+  /* === 4. REMOVE RIPPLE ANIMATION === */
+  .brand-card::after {
+    display: none !important;
+  }
+
+  /* === 5. FASTER AUTOCOMPLETE === */
+  #autocomplete {
+    backdrop-filter: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  }
+
+  /* === 6. PREVENT LAYOUT SHIFT ON CARD LOAD === */
+  #brandCards,
+  #priceRangeCards {
+    gap: 8px !important;
+  }
+}
+}
+
+/* ================= */
+
+/* SMOOTH SCROLL FIX – MOBILE ONLY */
+@media (max-width: 768px) {
+  /* 1. REMOVE BLUR – BIGGEST WIN */
+  .brand-card,
+  .price-card,
+  .chipset-select,
+  #sortBtn,
+  .sort-btn {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* 2. FLATTEN CARDS – NO SHADOW, NO TRANSFORM */
+  .brand-card,
+  .price-card,
+  .chipset-select {
+    box-shadow: none !important;
+    transform: none !important;
+    transition: background 0.2s ease, border-color 0.2s ease !important;
+    will-change: auto !important;
+  }
+
+  /* 3. HOVER = BG CHANGE ONLY */
+  .brand-card:hover,
+  .price-card:hover,
+  .chipset-select:hover {
+    background: rgba(255, 69, 0, 0.12) !important;
+    border-color: var(--accent) !important;
+  }
+
+  /* 4. SELECTED = SOLID COLOR */
+  .brand-card.selected,
+  .price-card.selected,
+  .chipset-select.selected {
+    background: var(--accent) !important;
+    color: white !important;
+    border-color: var(--accent) !important;
+  }
+
+  /* 5. REMOVE RIPPLE */
+  .brand-card::after {
+    display: none !important;
+  }
+
+  /* 6. OPTIMIZE CONTAINER */
+  #brandCards,
+  #priceRangeCards {
+    contain: layout style paint;
+    will-change: transform;
+    padding: 4px 8px !important;
+    gap: 6px !important;
+  }
+
+  /* 7. SMALLER FONT & PADDING */
+  .brand-card,
+  .price-card {
+    padding: 6px 10px !important;
+    font-size: 0.82rem !important;
+    min-height: 32px;
+  }
+
+  /* 8. CHIPSET SELECT – FLAT */
+  .chipset-select {
+    padding: 6px 10px 6px 12px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    touch-action: pan-y; /* Prevents scroll hijacking */
+  }
+
+  #brandCards,
+  #priceRangeCards {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* ---- ADD INSIDE your <style> tag (anywhere after the other @media blocks) ---- */
+@media (max-width: 768px) {
+  /* autocomplete keeps the nice blur – it’s a single element, cheap */
+  #autocomplete {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border) !important;
+    border-top: none !important;
+    border-radius: 0 0 var(--radius) var(--radius) !important;
+    box-shadow: var(--shadow) !important;
+  }
+}
