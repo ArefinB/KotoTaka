@@ -7,10 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>KotoTaka – Cheapest Mobile Phone Prices in Bangladesh</title>
+    <title>KotoTaka – Cheapest Tablet Prices in Bangladesh</title>
     <meta
       name="description"
-      content="Find the lowest prices for Samsung, Xiaomi, iPhone, Realme & more from local shops in Bangladesh. Updated daily."
+      content="Find the lowest prices for Samsung, Xiaomi, iPad, Realme & more from local shops in Bangladesh. Updated daily."
     />
 
     <link rel="canonical" href="https://kototaka.store" />
@@ -18,24 +18,11 @@
     <link rel="alternate" hreflang="en" href="https://kototaka.store/en" />
 
     <!-- FAVICON & APPLE TOUCH ICONS -->
-    <link
-      rel="shortcut icon"
-      href="/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon.ico"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon.ico"
-    />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico" />
 
-    <link rel="stylesheet" href="stylee.css" />
+    <link rel="stylesheet" href="tablet.css" />
 
     <!-- PWA / iOS SAFARI -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -46,11 +33,11 @@
     <!-- OPEN GRAPH / SOCIAL -->
     <meta
       property="og:title"
-      content="KotoTaka – Cheapest Phone Prices in BD"
+      content="KotoTaka – Cheapest Tablet Prices in BD"
     />
     <meta
       property="og:description"
-      content="Track the lowest mobile prices from local shops in Bangladesh. Updated daily."
+      content="Track the lowest tablets from local shops in Bangladesh. Updated daily."
     />
     <meta
       property="og:image"
@@ -62,7 +49,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="KotoTaka – Cheapest Phone Prices in BD"
+      content="KotoTaka – Cheapest Tablet Prices in BD"
     />
     <meta
       name="twitter:description"
@@ -81,7 +68,7 @@
         "name": "KotoTaka",
         "alternateName": "কতোটাকা",
         "url": "https://kototaka.store",
-        "description": "Find the cheapest mobile phone prices in Bangladesh from local shops. Updated daily.",
+        "description": "Find the cheapest tablet prices in Bangladesh from local shops. Updated daily.",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://kototaka.store/?q={search_term_string}",
@@ -101,7 +88,7 @@
     <!-- CSS -->
     <style>
       :root {
-        --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3);
+        --bg-gradient: linear-gradient(135deg, #fcede0, #cfdef3);
         --card-bg: rgb(255, 255, 255);
         --text: #1a1a1a;
         --text-light: #555;
@@ -114,9 +101,9 @@
       }
 
       [data-theme="dark"] {
-        --bg-gradient: linear-gradient(135deg, #0f0f1a, #1a1a2e);
-        --card-bg: rgba(20, 20, 35, 0.7);
-        --text: #e0e0ff;
+        --bg-gradient: linear-gradient(135deg, #161428, #1a2417);
+        --card-bg: rgba(20, 25, 35, 0.515);
+        --text: #ffffff;
         --text-light: #aaa;
         --accent: #ff5722;
         --border: rgba(255, 255, 255, 0.1);
@@ -225,7 +212,7 @@
         left: 0;
         right: 0;
         background: var(--card-bg);
-        border: 1px solid var(--border);
+      /*  border: 1px solid var(--border); */
         border-top: none;
         border-radius: 0 0 16px 16px;
         max-height: 300px;
@@ -474,7 +461,7 @@
         font-weight: 600;
       }
 
-      /* Phone Image - NO BORDER RADIUS */
+      /* Tablet Image - NO BORDER RADIUS */
       .phone-image img {
         max-width: 90px;
         max-height: 130px;
@@ -518,7 +505,7 @@
       }
 
       .no-result::before {
-        content: "Mobile";
+        content: "Tablet";
         display: block;
         font-size: 3rem;
         margin-bottom: 16px;
@@ -579,7 +566,7 @@
 
         /* ---- PREVENT OVERLAP: Push text down so badge doesn't touch image ---- */
         .text-content {
-          margin-top: 28px; /* creates gap under badge + "Phone Speed" */
+          margin-top: 28px; /* creates gap under badge + "Tablet Speed" */
         }
 
         /* Badge & label stay centered and visible */
@@ -617,7 +604,7 @@
       }
 
       /* -------------------------------------------------
-     SPEED BADGE – orange circle + “Phone Speed” label
+     SPEED BADGE – orange circle + "Tablet Speed" label
      ------------------------------------------------- */
       .speed-badge {
         position: absolute;
@@ -639,7 +626,7 @@
       }
       .speed-label {
         position: absolute;
-        top: 30px; /* between badge and “Last Updated” */
+        top: 30px; /* between badge and "Last Updated" */
         left: 50%;
         transform: translateX(-50%);
         font-size: 0.78rem;
@@ -696,7 +683,7 @@
         border-radius: 50px;
         font-weight: 600;
         font-size: 0.95rem;
-        cursor598: pointer;
+        cursor: pointer;
         transition: var(--transition);
         backdrop-filter: blur(10px);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -746,12 +733,12 @@
     <div class="theme-toggle" id="themeToggle"></div>
 
     <!-- Hidden H1 for SEO -->
-    <!-- <h1 style="position:absolute; left:-9999px; width:1px; height:1px;">KotoTaka – Cheapest Mobile Phone Prices in Bangladesh</h1> -->
+    <!-- <h1 style="position:absolute; left:-9999px; width:1px; height:1px;">KotoTaka – Cheapest Tablet Prices in Bangladesh</h1> -->
 
     <div style="text-align: center; margin-bottom: 10px">
       <img
         src="https://i.ibb.co.com/RT56M0kK/KotoTaka.png"
-        alt="Phone Price Finder Logo"
+        alt="Tablet Price Finder Logo"
         class="logo"
       />
     </div>
@@ -760,7 +747,7 @@
       <input
         type="text"
         id="search"
-        placeholder="🔎 মামা, ফোন খুঁজছো নাকি? এখানে সার্চ করো।"
+        placeholder="🔎 মামা, ট্যাবলেট খুঁজছো নাকি? এখানে সার্চ করো।"
       />
       <span id="clearSearch" class="clear-btn" title="Clear">ঘষা দেও </span>
       <div id="autocomplete"></div>
@@ -778,9 +765,9 @@
     <!-- REPLACED: old sortBtn -->
     <div id="sortControls" style="display: none">
       <button id="sortPriceBtn" class="sort-btn active">
-        কম দামী আগে দেখাবা
+        সবচেয়ে সস্তা আগে
       </button>
-      <button id="sortSpeedBtn" class="sort-btn">ফাস্ট ফোন আগে দেখাবা</button>
+      <button id="sortSpeedBtn" class="sort-btn">পারফর্মেন্সে সেরা আগে</button>
     </div>
 
     <!-- RESULTS WITH PAGINATION -->
@@ -816,7 +803,7 @@
         <div class="faq-item">
           <div class="faq-question">কতোটাকা এর কাজ কী??</div>
           <div class="faq-answer">
-            সহজভাবে বললে, আমরা খুঁজে দিই কোন দোকানে মোবাইলটা সবচেয়ে কম দামে
+            সহজভাবে বললে, আমরা খুঁজে দিই কোন দোকানে ট্যাবলেটটা সবচেয়ে কম দামে
             মিলবে। তুমি যেন দামে ঠকো না, সেটাই আমাদের কাজ। দামগুলো প্রতিদিন
             টাটকা করা হয়!
           </div>
@@ -843,14 +830,15 @@
           </div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Phone Speed টা বুঝায় দেও তো মামা।</div>
+          <div class="faq-question">Tablet Speed টা বুঝায় দেও তো মামা।</div>
           <div class="faq-answer">
-            ফোনের স্পিড স্কোর হলো একটি সংখ্যা যা দেখায় এই যুগে ফোন কত দ্রুত কাজ
-            করতে পারে। আমরা AnTuTu, Geekbench আর 3DMark ব্যবহার করে AI দিয়ে
-            কাস্টম একটা স্কোর বের করেছি, তাদের জন্য যারা ভিন্ন চিপ এর নাম দেখে
-            বুঝতে পারে না যে এটা ভালো নাকি ঔটা ভালো। দেখো তুমি ফোনে কী করছ: হেভি
-            গেমিং = ৮০+, মোটামুটি একটু পাবজি গেমিং = ৪০+, মিডিয়াম কাজ = ৩০+,
-            এমনি সোশ্যাল মিডিয়া = ২৫+, ল্যাগ + ইউটিউব = ১৫+, ল্যাগ + কল = ১০+।
+            ট্যাবলেট এর স্পিড স্কোর হলো একটি সংখ্যা যা দেখায় এই যুগে ট্যাবলেট
+            কত দ্রুত কাজ করতে পারে। আমরা AnTuTu, Geekbench আর 3DMark ব্যবহার করে
+            AI দিয়ে কাস্টম একটা স্কোর বের করেছি, তাদের জন্য যারা ভিন্ন চিপ এর
+            নাম দেখে বুঝতে পারে না যে এটা ভালো নাকি ঔটা ভালো। দেখো তুমি ট্যাবলেট
+            এ কী করছ: হেভি গেমিং = ৮০+, মোটামুটি একটু পাবজি গেমিং = ৪০+,
+            মিডিয়াম কাজ = ৩০+, এমনি সোশ্যাল মিডিয়া = ২৫+, ল্যাগ + ইউটিউব =
+            ১৫+।
           </div>
         </div>
       </div>
@@ -858,14 +846,15 @@
 
     <footer class="footer" style="text-decoration: none; color: #55555587">
       <p>
-        Practice project by
+        Programming Hero practice project by
         <a href="https://www.facebook.com/arefinbee" target="_blank"
           >Arefin Bashar Arif</a
         >
-        and
+        and contributed by
         <a href="https://www.facebook.com/rakibtnt69" target="_blank"
           >MD Rakib Islam</a
-        >. Contributed by
+        >
+        and
         <a href="https://www.linkedin.com/in/naimurhasanrwd/" target="_blank"
           >Naimur Hasan</a
         >.
@@ -917,14 +906,13 @@
       showSkeleton();
 
       const sheetCsvUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiaF5cAeBXlMhKwsmjVQ4-hWQzG2-npQZk7oMUoKC6IyaXu5HvIQ00PunSqjNbyCRKgz97c-Ty23x8/pub?output=csv";
-      let phones = [],
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRao5emNlhfJ9Mg3lKPriReMh_Qbx89bzDUzVMP1eFJEVEkzsmEHYvecZ_KhIwjvUiHYhLLw_m63TyL/pub?output=csv";
+      let tablets = [],
         brands = [],
         currentBrand = null,
-        currentPriceRange = null,
-        currentChipset = null;
+        currentPriceRange = null;
       let sortPriceMode = "asc",
-        sortSpeedMode = "asc"; // NEW
+        sortSpeedMode = "asc";
 
       // ————————————————————————————————————————
       // MOBILE-ONLY SCROLL JANK FIX (Safe & Working)
@@ -981,63 +969,73 @@
         .then((res) => res.text())
         .then((csvText) => {
           const data = parseCSV(csvText);
-          phones = data
+          tablets = data
             .map((r) => {
               const brand = r.BRANDS?.trim() || "";
-              const series = r.SERIES ? r.SERIES.trim() : "";
               const model = r.MODEL?.trim() || "";
+              const price = r["CHEAPEST PRICE"] || "N/A";
+              const shop = r.SHOP || r.SOURCE || "N/A"; // Fallback if SHOP missing
+              const size = r.SIZE || "";
+              const ramStorage = r["RAM/STORAGE"] || "";
+              const panel = r.PANEL || ""; // Assuming "PANEL" from your list
+              const variant = r.VARIANT || "";
+              const date = r.DATE || "N/A";
+              const sim = r.SIM || "";
+              const warranty = r.WARRANTY || "";
               const sourceUrl = r.SOURCE
                 ? r.SOURCE.trim().replace(/^"|"$/g, "")
                 : "";
+              const region = r.REGION || "";
+              const score = r.SCORE || "";
+              const refreshRate = r["REFRESH RATE"] || "";
+              const speakers = r.SPEAKERS || "";
+              const stylus = r.STYLUS || "";
               const imageUrl = r.IMAGE ? r.IMAGE.trim() : "";
-              const region = r.REGION ? r.REGION.trim() : "";
-              const searchWords = (brand + " " + series + " " + model)
+
+              const searchWords = (brand + " " + model)
                 .toLowerCase()
                 .split(/\s+/);
               return {
                 brand,
-                series,
                 model,
-                name: (brand + series + " " + model).trim(),
-                cleanName:
-                  brand === "Extra"
-                    ? model.trim()
-                    : (brand + series + " " + model).trim(),
-                searchWords: (brand + " " + series + " " + model)
-                  .toLowerCase()
-                  .split(/\s+/),
-                price: r["PRICE"] || "N/A",
-                shop: r.SHOP || "N/A",
+                name: (brand + " " + model).trim(),
+                cleanName: (brand + " " + model).trim(),
+                searchWords,
+                isNotInBD:
+                  (r.SHOP || "").trim().toUpperCase() ===
+                  "NOT AVAILABLE IN BD YET",
+                price,
+                shop,
                 info: {
-                  ram: r["RAM/STORAGE"] || "",
-                  sim: r.SIM || "",
-                  chipset: r.VARIANT || "",
-                  region: r.REGION || "",
-                  lastUpdatedPrice: r["DATE"] || "N/A",
+                  size,
+                  ramStorage,
+                  panel,
+                  variant,
+                  sim,
+                  region,
+                  date,
                   source: sourceUrl,
-                  warranty: r["WARRANTY"] || "",
-                  warrantyShop: r["WARRANTY SHOP"] || "",
+                  warranty,
+                  score,
+                  refreshRate,
+                  speakers,
+                  stylus,
                   image: imageUrl,
-                  score: r.SCORE || "", 
-                  otherShops: r['OTHER SHOPS'] || ''
                 },
               };
             })
-            .filter((p) => p.brand);
+            .filter((t) => t.brand && t.model);
 
-          function getCleanName(phone) {
-            if (phone.brand === "Extra") {
-              return phone.model.trim(); // Only model name
-            }
-            return phone.name.trim(); // Normal: Brand + Series + Model
+          function getCleanName(tablet) {
+            return tablet.name.trim();
           }
 
           // Brand Counts
           const brandCounts = {};
-          phones.forEach((p) => {
-            let key = p.brand;
+          tablets.forEach((t) => {
+            let key = t.brand;
             for (const [merged, originals] of Object.entries(brandMergeMap)) {
-              if (originals.includes(p.brand)) {
+              if (originals.includes(t.brand)) {
                 key = merged;
                 break;
               }
@@ -1047,7 +1045,7 @@
 
           // === FILTER OUT "Extra" BRAND FROM BRAND LIST ===
           const brandSet = new Set(
-            phones.map((p) => p.brand).filter((b) => b && b.trim() !== "Extra") // ← THIS LINE REMOVES "Extra"
+            tablets.map((t) => t.brand).filter((b) => b && b.trim() !== "Extra")
           );
 
           const mergedBrands = [];
@@ -1078,9 +1076,48 @@
       const results = document.getElementById("results");
       const brandCardsDiv = document.getElementById("brandCards");
       const priceRangeCardsDiv = document.getElementById("priceRangeCards");
-      const sortControls = document.getElementById("sortControls"); // NEW
-      const sortPriceBtn = document.getElementById("sortPriceBtn"); // NEW
-      const sortSpeedBtn = document.getElementById("sortSpeedBtn"); // NEW
+      const sortControls = document.getElementById("sortControls");
+      const sortPriceBtn = document.getElementById("sortPriceBtn");
+      const sortSpeedBtn = document.getElementById("sortSpeedBtn");
+
+      function buildVariantButtons(current, group) {
+        const others = group.filter((v) => v !== current);
+        if (others.length === 0) return "";
+
+        function formatPrice(p) {
+          const num = parseInt(p.replace(/\D/g, ""), 10) || 0;
+          if (num >= 100000) return `৳${Math.round(num / 1000)}K`;
+          if (num >= 10000)
+            return `৳${(num / 1000).toFixed(1).replace(".0", "")}K`;
+          return `৳${num}`;
+        }
+
+        return others
+          .map((v) => {
+            const parts = [];
+            if (v.info.size && v.info.size !== current.info.size)
+              parts.push(v.info.size.trim() + " Inch");
+            if (v.info.ramStorage !== current.info.ramStorage)
+              parts.push(v.info.ramStorage);
+            if (v.info.sim && v.info.sim !== current.info.sim)
+              parts.push(v.info.sim);
+            if (v.info.variant && v.info.variant !== current.info.variant)
+              parts.push(v.info.variant);
+            if (v.info.region && v.info.region !== current.info.region)
+              parts.push(v.info.region);
+
+            const label =
+              parts.length > 0
+                ? parts.join(" • ") + " • " + formatPrice(v.price)
+                : formatPrice(v.price);
+            const key = `${v.info.size || ""}|${v.info.ramStorage}|${
+              v.info.sim || ""
+            }|${v.info.variant || ""}|${v.info.region || ""}`;
+
+            return `<button class="variant-btn" data-variant-id="${key}">${label}</button>`;
+          })
+          .join("");
+      }
 
       function renderBrandCards(counts) {
         brandCardsDiv.innerHTML = "";
@@ -1093,160 +1130,55 @@
           card.addEventListener("click", () => {
             currentBrand = brand;
             currentPriceRange = null;
-            currentChipset = null;
             showBrand(brand);
             highlightSelectedCard(card);
             document
-              .querySelectorAll(".price-card, .chipset-select")
+              .querySelectorAll(".price-card")
               .forEach((c) => c.classList.remove("selected"));
+            chipsetSelect.selectedIndex = 0;
+            chipsetSelect.classList.remove("selected");
             updatePageMeta(
-              `${brand} Phones`,
-              `Cheapest ${brand} prices in Bangladesh from local shops. Updated daily.`
+              `${brand} Tablets`,
+              `Cheapest ${brand} tablets in Bangladesh from local shops. Updated daily.`
             );
           });
           brandCardsDiv.appendChild(card);
         });
 
-        // === ADD CHIPSET DROPDOWN BUTTON AT THE END ===
+        // CHIPSET DROPDOWN (using your VARIANT column as chipset)
+        const allChipsets = [
+          ...new Set(tablets.map((t) => t.info.variant).filter(Boolean)),
+        ].sort();
+
         const chipsetSelect = document.createElement("select");
         chipsetSelect.className = "brand-card chipset-select";
-        chipsetSelect.innerHTML =
-          '<option value="" disabled selected>Chipset</option>' +
-          [
-            "Snapdragon 8 Elite Gen 5",
-            "Snapdragon 8 Elite",
-            "Snapdragon 8s Gen 4",
-            "Snapdragon 8 Gen 3",
-            "Snapdragon 8s Gen 3",
-            "Snapdragon 8 Gen 2",
-            "Snapdragon 8+ Gen 1",
-            "Snapdragon 8 Gen 1",
-            "Snapdragon 888+",
-            "Snapdragon 888",
-            "Snapdragon 870",
-            "Snapdragon 7 Gen 4",
-            "Snapdragon 7+ Gen 3",
-            "Snapdragon 7 Gen 3",
-            "Snapdragon 7+ Gen 2",
-            "Snapdragon 7s Gen 4",
-            "Snapdragon 7s Gen 3",
-            "Snapdragon 782G",
-            "Snapdragon 7 Gen 1",
-            "Snapdragon 778G+",
-            "Snapdragon 778G",
-            "Snapdragon 780G",
-            "Snapdragon 768G",
-            "Snapdragon 765",
-            "Snapdragon 750G",
-            "Snapdragon 7s Gen 2",
-            "Snapdragon 6s Gen 3",
-            "Snapdragon 6 Gen 4",
-            "Snapdragon 6 Gen 3",
-            "Snapdragon 695",
-            "Snapdragon 6 Gen 1",
-            "Snapdragon 690",
-            "Snapdragon 685",
-            "Snapdragon 680",
-            "Snapdragon 4s Gen 2",
-            "Snapdragon 4 Gen 2",
-            "Snapdragon 4 Gen 1",
-            "Snapdragon 480+",
-            "Snapdragon 480",
-            "Dimensity 9500",
-            "Dimensity 9400+",
-            "Dimensity 9400",
-            "Dimensity 9350+",
-            "Dimensity 9300+",
-            "Dimensity 9300",
-            "Dimensity 9200+",
-            "Dimensity 9200",
-            "Dimensity 9000+",
-            "Dimensity 9000",
-            "Dimensity 8450",
-            "Dimensity 8400",
-            "Dimensity 8350",
-            "Dimensity 8300",
-            "Dimensity 8200",
-            "Dimensity 8100",
-            "Dimensity 8000",
-            "Dimensity 7400",
-            "Dimensity 7360",
-            "Dimensity 7300+",
-            "Dimensity 7200",
-            "Dimensity 7050",
-            "Dimensity 7030",
-            "Dimensity 7025",
-            "Dimensity 7020",
-            "Dimensity 1300",
-            "Dimensity 1200",
-            "Dimensity 1100",
-            "Dimensity 1080",
-            "Dimensity 1050",
-            "Dimensity 920",
-            "Dimensity 900",
-            "Dimensity 810",
-            "Dimensity 800U",
-            "Dimensity 700",
-            "Dimensity 6400",
-            "Dimensity 6300",
-            "Dimensity 6100+",
-            "Helio G100 Ultra",
-            "Helio G99",
-            "Helio G96",
-            "Helio G91",
-            "Helio G88",
-            "Helio G85",
-            "Helio G81",
-            "Helio G70",
-            "Helio G36",
-            "Apple A19 Pro",
-            "Apple A19",
-            "Apple A18 Pro",
-            "Apple A18",
-            "Apple A17 Pro",
-            "Apple A17",
-            "Apple A16",
-            "Apple A15",
-            "Apple A14",
-            "Exynos 2500",
-            "Exynos 2400e",
-            "Exynos 2400",
-            "Exynos 2200",
-            "Exynos 2100",
-            "Exynos 1580",
-            "Exynos 1480",
-            "Exynos 1380",
-            "Exynos 1330",
-            "Exynos 1280",
-            "Exynos 1080",
-            "Tensor G5",
-            "Tensor G4",
-            "Tensor G3",
-            "Tensor G2",
-            "Kirin 9020",
-            "Kirin 9000s",
-            "Kirin 9000",
-            "Unisoc T7520",
-            "Unisoc T770",
-            "Unisoc T7250",
-            "Unisoc T618",
-          ]
-            .map((chip) => `<option value="${chip}">${chip}</option>`)
-            .join("");
+        chipsetSelect.innerHTML = `
+    <option value="" disabled selected>Chipset</option>
+    ${allChipsets
+      .map((chip) => `<option value="${chip}">${chip}</option>`)
+      .join("")}
+  `;
 
         chipsetSelect.addEventListener("change", function () {
           const selectedChipset = this.value;
-          currentChipset = selectedChipset;
+          if (!selectedChipset) return;
+
           currentBrand = null;
           currentPriceRange = null;
           document
             .querySelectorAll(".brand-card, .price-card")
             .forEach((c) => c.classList.remove("selected"));
           this.classList.add("selected");
-          filterByChipset(selectedChipset);
+
+          const filtered = tablets.filter(
+            (t) => t.info.variant === selectedChipset
+          );
+          showAllVariants(applySort(filtered));
+          sortControls.style.display = "flex";
+
           updatePageMeta(
-            `${selectedChipset} Phones`,
-            `Cheapest phones with ${selectedChipset} in Bangladesh.`
+            `${selectedChipset} Tablets`,
+            `Best tablets with ${selectedChipset} chipset in Bangladesh – lowest prices.`
           );
         });
 
@@ -1278,18 +1210,17 @@
           card.addEventListener("click", () => {
             currentPriceRange = [min, max];
             currentBrand = null;
-            currentChipset = null;
             document
               .querySelectorAll(".price-card")
               .forEach((c) => c.classList.remove("selected"));
             card.classList.add("selected");
             document
-              .querySelectorAll(".brand-card, .chipset-select")
+              .querySelectorAll(".brand-card")
               .forEach((c) => c.classList.remove("selected"));
             filterByPrice(min, max);
             updatePageMeta(
-              `${label} Phones`,
-              `Phones between ${label} in Bangladesh – lowest prices from local shops.`
+              `${label} Tablets`,
+              `Tablets between ${label} in Bangladesh – lowest prices from local shops.`
             );
           });
           priceRangeCardsDiv.appendChild(card);
@@ -1307,12 +1238,11 @@
         const fields = [
           "price",
           "shop",
-          "ram",
+          "size",
+          "ramStorage",
+          "panel",
+          "variant",
           "sim",
-          "chipset",
-          "source",
-          "warranty",
-          "warrantyShop",
           "region",
         ];
         const diffs = {};
@@ -1329,29 +1259,38 @@
       function showAllVariants(variants) {
         if (!variants.length) {
           results.innerHTML =
-            '<li class="no-result">কোনো ফোন পাওয়া যায়নি।</li>';
+            '<li class="no-result">কোনো ট্যাবলেট পাওয়া যায়নি।</li>';
           document.getElementById("pagination").style.display = "none";
           return;
         }
 
-        // Group by phone name
-        const phoneMap = {};
-        variants.forEach((phone) => {
-          const key = phone.name;
-          if (!phoneMap[key]) phoneMap[key] = [];
-          phoneMap[key].push(phone);
+        // Group by tablet name
+        const tabletMap = {};
+        // Put "NOT AVAILABLE" tablets at the very bottom
+        const normal = variants.filter(
+          (t) => t.shop.trim().toUpperCase() !== "NOT AVAILABLE IN BD YET"
+        );
+        const unavailable = variants.filter(
+          (t) => t.shop.trim().toUpperCase() === "NOT AVAILABLE IN BD YET"
+        );
+        const sortedList = [...normal, ...unavailable];
+
+        sortedList.forEach((tablet) => {
+          const key = tablet.name;
+          if (!tabletMap[key]) tabletMap[key] = [];
+          tabletMap[key].push(tablet);
         });
 
-        const groupedPhones = Object.values(phoneMap);
+        const groupedTablets = Object.values(tabletMap);
         const RESULTS_PER_PAGE = 10;
         let currentPage = 1;
-        const totalPages = Math.ceil(groupedPhones.length / RESULTS_PER_PAGE);
+        const totalPages = Math.ceil(groupedTablets.length / RESULTS_PER_PAGE);
 
         function renderPage(page) {
           results.innerHTML = "";
           const start = (page - 1) * RESULTS_PER_PAGE;
           const end = start + RESULTS_PER_PAGE;
-          const pageItems = groupedPhones.slice(start, end);
+          const pageItems = groupedTablets.slice(start, end);
 
           pageItems.forEach((group) => {
             const defaultVariant = group[0];
@@ -1359,117 +1298,93 @@
             li.className = "card-wrapper variant-card";
 
             // === BUILD OTHER VARIANT BUTTONS ===
-            function buildVariantButtons(current, group) {
-  const others = group.filter((v) => v !== current);
-  if (others.length === 0) return "";
+            // === UPDATED: BUILD VARIANT BUTTONS (Now includes SIZE + "Inch") ===
 
-  // Helper: convert price like 30500 → "30.5K", 103000 → "103K"
-  function formatPrice(priceStr) {
-  const price = parseInt(priceStr.replace(/\D/g, ""), 10) || 0;
-  const thousands = price / 1000;
-
-  if (price >= 100000) {
-    // 100K and above → always whole number
-    return `৳${Math.round(thousands)}K`;
-  } else if (price >= 10000) {
-    // 10K to 99.9K → show decimal only if needed
-    const rounded = Math.round(thousands * 10) / 10; // keeps .5, removes .0
-    return `৳${rounded.toFixed(1).replace(".0", "")}K`;
-  } else {
-    return `৳${price}`;
-  }
-}
-
-  return others
-    .map((v) => {
-      const diff = [];
-
-      if (v.info.ram !== current.info.ram) diff.push(v.info.ram);
-      if (v.info.sim !== current.info.sim) diff.push(v.info.sim);
-      if (v.info.chipset !== current.info.chipset) diff.push(v.info.chipset);
-      if (v.info.region !== current.info.region) diff.push(v.info.region);
-
-      // Always show price at the end
-      const priceLabel = formatPrice(v.price);
-
-      const label = diff.length > 0 
-        ? diff.join(" • ") + ` • ${priceLabel}`
-        : priceLabel;
-
-      const key = `${v.info.ram}-${v.info.sim}-${v.info.chipset}-${v.info.region}`;
-
-      return `
-        <button class="variant-btn" 
-                data-variant-id="${key}"
-                style="background: #d32f2f; color: white; margin: 4px; padding: 6px 10px; border-radius: 20px; font-size: 0.8rem; border: none; cursor: pointer;">
-          ${label}
-        </button>
-      `;
-    })
-    .join("");
-}
-
-            const sourceHTML = defaultVariant.info.source?.startsWith('http')
-  ? `🔗 Source: <a href="${defaultVariant.info.source}" target="_blank" class="highlight">LINK</a><br>`
-  : '';  // ← completely empty = line disappears
+            const sourceHTML = defaultVariant.info.source?.startsWith("http")
+              ? `🔗 Source: <a href="${defaultVariant.info.source}" target="_blank" class="highlight">LINK</a><br>`
+              : "";
 
             const score = defaultVariant.info.score?.trim();
 
             li.innerHTML = `
-  ${
-    score
-      ? `<div class="speed-badge">${score}</div><div class="speed-label">Phone Speed</div>`
-      : ""
-  }
-  <div class="card-content">
-    <div class="text-content">
-      <strong class="phone-title">📱 ${defaultVariant.cleanName}</strong>
-      ${
-        group.length > 1
-          ? `<div class="variant-buttons">${buildVariantButtons(
-              defaultVariant,
-              group
-            )}</div>`
-          : ""
-      } 
-      <div class="shop">Price: <span class="price">💰 ৳${
-        defaultVariant.price
-      }</span> | <span style= "color: #f5b09b;"> দোকান: </span> <span class="shop-name">${
-              defaultVariant.shop
-            }</span></div>
-      <div class="info">
-        ⚙️ RAM/Storage: <span class="ram">${defaultVariant.info.ram}</span><br>
-        📶 SIM: <span class="sim">${defaultVariant.info.sim}</span><br>
-        🧠 Chipset: <span class="chipset">${
-          defaultVariant.info.chipset
-        }</span><br>
-        🌎 Region: <span class="region">${defaultVariant.info.region}</span><br>
-        ${sourceHTML}
-${defaultVariant.info.warranty?.trim()
-  ? `🛡️ Warranty Info: <span class="warranty">${defaultVariant.info.warranty}</span><br>`
-  : `🛡️ Warranty Info: <span class="warranty" style="color: var(--text-light); font-style: italic;">Minimum 7 days replacement warranty without display and software.</span><br>`
-}
-${defaultVariant.info.otherShops?.trim() 
-  ? `<br>💸 অন্যান্য দোকান: <span style="color: var(--accent); font-weight:600;">${defaultVariant.info.otherShops}</span><br>` 
-  : ''
-}
-        ${
-          defaultVariant.info.warrantyShop
-            ? `Warranty Shop: <span class="warranty-shop">${defaultVariant.info.warrantyShop}</span><br>`
-            : ""
-        }
-      </div>
-    </div>
-    ${
-      defaultVariant.info.image
-        ? `<div class="phone-image"><img data-src="${defaultVariant.info.image}" alt="${defaultVariant.name}" loading="lazy"></div>`
-        : ""
-    }
-  </div>
-  <div class="footer-info">Last Updated: <span class="last-updated">${
-    defaultVariant.info.lastUpdatedPrice
-  }</span></div>
-`;
+              ${
+                score
+                  ? `<div class="speed-badge">${score}</div><div class="speed-label">Tablet Speed</div>`
+                  : ""
+              }
+              <div class="card-content">
+                <div class="text-content">
+                  <strong class="phone-title">📱 ${
+                    defaultVariant.brand.charAt(0).toUpperCase() +
+                    defaultVariant.brand.slice(1).toLowerCase()
+                  } ${defaultVariant.model}${
+              defaultVariant.info.sim ? ` (${defaultVariant.info.sim})` : ""
+            }</strong>
+                  ${
+                    group.length > 1
+                      ? `<div class="variant-buttons">${buildVariantButtons(
+                          defaultVariant,
+                          group
+                        )}</div>`
+                      : ""
+                  } 
+                  ${
+                    defaultVariant.isNotInBD
+                      ? '<div style="color:#d32f2f;font-weight:700;font-size:1.1rem;">বাংলাদেশে আসে নি এখোনো</div>'
+                      : `<div class="shop">
+  <span class="price-prefix">💰</span>
+  <span class="price">৳${defaultVariant.price}</span>
+  <span class="shop-prefix"> | দোকান:</span>
+  <span class="shop-name">${defaultVariant.shop}</span>
+</div>`
+                  }
+  
+                  <div class="info">
+                    ${(() => {
+                      const parts = [];
+                      if (defaultVariant.info.size)
+                        parts.push(defaultVariant.info.size + "-inch");
+                      if (defaultVariant.info.panel)
+                        parts.push(defaultVariant.info.panel);
+                      if (defaultVariant.info.refreshRate)
+                        parts.push(defaultVariant.info.refreshRate);
+                      return parts.length
+                        ? `📺 Display: ${parts.join(" ")}<br>`
+                        : "";
+                    })()}
+⚙️ RAM/Storage: ${defaultVariant.info.ramStorage}<br>
+🧠 Chipset: ${defaultVariant.info.variant || "N/A"}<br>
+                    ${
+                      defaultVariant.info.speakers
+                        ? `🔊 Speakers: <span class="speakers">${defaultVariant.info.speakers}</span><br>`
+                        : ""
+                    }
+                    ${
+                      defaultVariant.info.stylus
+                        ? `✏️ Stylus: <span class="stylus">${defaultVariant.info.stylus}</span><br>`
+                        : ""
+                    }
+                    ${
+                      defaultVariant.info.region?.trim()
+                        ? `🌎 Region: ${defaultVariant.info.region}<br>`
+                        : ""
+                    }
+
+${sourceHTML}
+
+${defaultVariant.info.warranty?.trim() ? `🛡️ Warranty: ${defaultVariant.info.warranty.trim()}<br>` : ""}
+                  </div>
+                </div>
+                ${
+                  defaultVariant.info.image
+                    ? `<div class="phone-image"><img data-src="${defaultVariant.info.image}" alt="${defaultVariant.name}" loading="lazy"></div>`
+                    : '<div class="phone-image"><div style="width:90px;height:130px;background:#eee;border-radius:12px"></div></div>'
+                }
+              </div>
+              <div class="footer-info">Last Updated: ${formatDate(
+                defaultVariant.info.date
+              )}</div>
+            `;
 
             // === EVENT DELEGATION: ONE LISTENER FOR ALL BUTTONS ===
             li.addEventListener("click", (e) => {
@@ -1477,9 +1392,12 @@ ${defaultVariant.info.otherShops?.trim()
               if (!btn) return;
 
               const variantKey = btn.dataset.variantId;
+              // Find this line and replace it:
               const selected = group.find(
                 (v) =>
-                  `${v.info.ram}-${v.info.sim}-${v.info.chipset}-${v.info.region}` ===
+                  `${v.info.size || ""}|${v.info.ramStorage || ""}|${
+                    v.info.sim || ""
+                  }|${v.info.variant || ""}|${v.info.region || ""}` ===
                   variantKey
               );
 
@@ -1488,38 +1406,52 @@ ${defaultVariant.info.otherShops?.trim()
               // Update card
               li.querySelector(".price").textContent = `৳${selected.price}`;
               li.querySelector(".shop-name").textContent = selected.shop;
-              li.querySelector(".ram").textContent = selected.info.ram;
-              li.querySelector(".sim").textContent = selected.info.sim;
-              li.querySelector(".chipset").textContent = selected.info.chipset;
-              li.querySelector(".region").textContent = selected.info.region;
-              li.querySelector(".last-updated").textContent =
-                selected.info.lastUpdatedPrice;
 
               const sourceLink = selected.info.source?.startsWith("http")
                 ? `<a href="${selected.info.source}" target="_blank" class="highlight">LINK</a>`
                 : "N/A";
-              const warrantyHTML = selected.info.warranty?.trim()
-                ? `🛡️ Warranty Info: <span class="warranty">${selected.info.warranty}</span><br>`
-                : `🛡️ Warranty Info: <span class="warranty" style="color: var(--text-light); font-style: italic;">Minimum 7 days replacement warranty without display and software.</span><br>`;
-              
-              const otherShopsHTML = selected.info.otherShops?.trim()
-  ? `<br>💸 অন্যান্য দোকান: <span style="color: var(--accent); font-weight:600;">${selected.info.otherShops}</span><br>`
-  : '';
-              const warrantyShopHTML = selected.info.warrantyShop
-                ? `Warranty Shop: <span class="warranty-shop">${selected.info.warrantyShop}</span><br>`
+              const sourceLinkHTML = selected.info.source?.startsWith("http")
+                ? `🔗 Source: <a href="${selected.info.source}" target="_blank" class="highlight">LINK</a><br>`
                 : "";
-const sourceLinkHTML = selected.info.source?.startsWith('http')
-  ? `🔗 Source: <a href="${selected.info.source}" target="_blank" class="highlight">LINK</a><br>`
-  : '';
+              const warrantyHTML = selected.info.warranty?.trim()
+                ? `🛡️ Warranty: <span class="warranty">${selected.info.warranty}</span><br>`
+                : `🛡️ Warranty: <span class="warranty" style="color: var(--text-light); font-style: italic;">Usually 1-year official</span><br>`;
 
-              li.querySelector(".info").innerHTML = `
-  ⚙️ RAM/Storage: <span class="ram">${selected.info.ram}</span><br>
-  📶 SIM: <span class="sim">${selected.info.sim}</span><br>
-  🧠 Chipset: <span class="chipset">${selected.info.chipset}</span><br>
-  🌎 Region: <span class="region">${selected.info.region}</span><br>
-  ${sourceLinkHTML}
-  ${warrantyHTML}${warrantyShopHTML}${otherShopsHTML}
-`.trim();
+              li.querySelector(".info").innerHTML = `<div class="info">
+                    ${(() => {
+                      const parts = [];
+                      if (selected.info.size)
+                        parts.push(selected.info.size + "-inch");
+                      if (selected.info.panel)
+                        parts.push(selected.info.panel);
+                      if (selected.info.refreshRate)
+                        parts.push(selected.info.refreshRate);
+                      return parts.length
+                        ? `📺 Display: ${parts.join(" ")}<br>`
+                        : "";
+                    })()}
+⚙️ RAM/Storage: ${selected.info.ramStorage}<br>
+🧠 Chipset: ${selected.info.variant || "N/A"}<br>
+                    ${
+                      selected.info.speakers
+                        ? `🔊 Speakers: <span class="speakers">${selected.info.speakers}</span><br>`
+                        : ""
+                    }
+                    ${
+                      selected.info.stylus
+                        ? `✏️ Stylus: <span class="stylus">${selected.info.stylus}</span><br>`
+                        : ""
+                    }
+                    ${
+                      selected.info.region?.trim()
+                        ? `🌎 Region: ${selected.info.region}<br>`
+                        : ""
+                    }
+
+${sourceHTML}
+
+${selected.info.warranty?.trim() ? `🛡️ Warranty: ${selected.info.warranty.trim()}<br>` : ""}
+                  </div>`.trim();
 
               // Update image
               const img = li.querySelector(".phone-image img");
@@ -1542,19 +1474,21 @@ const sourceLinkHTML = selected.info.source?.startsWith('http')
               }
 
               // === REBUILD BUTTONS (exclude current) ===
-              const buttonsContainer = li.querySelector(".variant-buttons");
+              // REBUILD BUTTONS — now always shows the previous variant too
               if (group.length > 1) {
-                if (!buttonsContainer) {
-                  const textContent = li.querySelector(".text-content");
-                  const shopDiv = textContent.querySelector(".shop");
-                  const buttonsDiv = document.createElement("div");
-                  buttonsDiv.className = "variant-buttons";
-                  textContent.insertBefore(buttonsDiv, shopDiv);
+                let container = li.querySelector(".variant-buttons");
+                if (!container) {
+                  container = document.createElement("div");
+                  container.className = "variant-buttons";
+                  li.querySelector(".text-content").insertBefore(
+                    container,
+                    li.querySelector(".shop").nextSibling
+                  );
                 }
-                li.querySelector(".variant-buttons").innerHTML =
-                  buildVariantButtons(selected, group);
+                container.innerHTML = buildVariantButtons(selected, group);
               } else {
-                if (buttonsContainer) buttonsContainer.remove();
+                const container = li.querySelector(".variant-buttons");
+                if (container) container.remove();
               }
             });
 
@@ -1601,8 +1535,8 @@ const sourceLinkHTML = selected.info.source?.startsWith('http')
         renderPage(1);
       }
 
-      function applySort(phonesList) {
-        return phonesList.sort((a, b) => {
+      function applySort(tabletsList) {
+        return tabletsList.sort((a, b) => {
           // Primary: Speed
           if (sortSpeedBtn.classList.contains("active")) {
             const scoreA = parseInt(a.info.score) || 0;
@@ -1621,51 +1555,36 @@ const sourceLinkHTML = selected.info.source?.startsWith('http')
       function showBrand(brandName) {
         currentBrand = brandName;
         sortControls.style.display = "flex";
-        let brandPhones = brandMergeMap[brandName]
-          ? phones.filter((p) => brandMergeMap[brandName].includes(p.brand))
-          : phones.filter(
-              (p) => p.brand.toLowerCase() === brandName.toLowerCase()
+        let brandTablets = brandMergeMap[brandName]
+          ? tablets.filter((t) => brandMergeMap[brandName].includes(t.brand))
+          : tablets.filter(
+              (t) => t.brand.toLowerCase() === brandName.toLowerCase()
             );
 
-        showAllVariants(applySort(brandPhones));
-        mobileScrollToResults();
+        showAllVariants(applySort(brandTablets));
         if (window.innerWidth <= 768) scrollToResults();
       }
 
       function filterByPrice(min, max) {
         sortControls.style.display = "flex";
-        let filtered = phones.filter((p) => {
-          const price = parseInt(p.price.replace(/\D/g, "")) || 0;
+        let filtered = tablets.filter((t) => {
+          const price = parseInt(t.price.replace(/\D/g, "")) || 0;
           return price >= min && (max === Infinity || price < max);
         });
         showAllVariants(applySort(filtered));
-        mobileScrollToResults();
         if (window.innerWidth <= 768) scrollToResults();
       }
 
-      function filterByChipset(chipset) {
-        sortControls.style.display = "flex";
-        let filtered = phones.filter(
-          (p) => p.info.chipset && p.info.chipset.trim() === chipset
-        );
-        showAllVariants(applySort(filtered));
-        mobileScrollToResults();
-        if (window.innerWidth <= 768) scrollToResults();
-      }
-
-      // NEW: Sort Button Listeners
+      // Sort Button Listeners
       sortPriceBtn.addEventListener("click", () => {
         sortPriceMode = sortPriceMode === "asc" ? "desc" : "asc";
         sortPriceBtn.textContent = `Price: ${
-          sortPriceMode === "asc"
-            ? "কম দামী আগে দেখাবা"
-            : "বেশী দামী আগে দেখাবা"
+          sortPriceMode === "asc" ? "সবচেয়ে সস্তা আগে" : "সবচেয়ে দামি আগে"
         }`;
         sortPriceBtn.classList.add("active");
         sortSpeedBtn.classList.remove("active");
         if (currentBrand) showBrand(currentBrand);
         else if (currentPriceRange) filterByPrice(...currentPriceRange);
-        else if (currentChipset) filterByChipset(currentChipset);
         else if (searchInput.value)
           searchInput.dispatchEvent(new Event("input"));
       });
@@ -1674,14 +1593,13 @@ const sourceLinkHTML = selected.info.source?.startsWith('http')
         sortSpeedMode = sortSpeedMode === "asc" ? "desc" : "asc";
         sortSpeedBtn.textContent = `Speed: ${
           sortSpeedMode === "asc"
-            ? "স্লো ফোন আগে দেখাবা"
-            : "ফাস্ট ফোন আগে দেখাবা"
+            ? "স্লো ট্যাবলেট আগে"
+            : "পারফর্মেন্সে সেরা আগে"
         }`;
         sortSpeedBtn.classList.add("active");
         sortPriceBtn.classList.remove("active");
         if (currentBrand) showBrand(currentBrand);
         else if (currentPriceRange) filterByPrice(...currentPriceRange);
-        else if (currentChipset) filterByChipset(currentChipset);
         else if (searchInput.value)
           searchInput.dispatchEvent(new Event("input"));
       });
@@ -1690,74 +1608,73 @@ const sourceLinkHTML = selected.info.source?.startsWith('http')
         searchInput.value = "";
         clearBtn.style.display = "none";
         autocompleteDiv.innerHTML = "";
+        autocompleteDiv.style.border = "none"
         results.innerHTML = "";
         sortControls.style.display = "none";
         currentBrand = null;
         currentPriceRange = null;
-        currentChipset = null;
         document
-          .querySelectorAll(".brand-card, .price-card, .chipset-select")
+          .querySelectorAll(".brand-card, .price-card")
           .forEach((c) => c.classList.remove("selected"));
-        document.querySelectorAll(".chipset-select").forEach((s) => {
-          s.selectedIndex = 0;
-        });
         sortPriceBtn.classList.add("active");
         sortSpeedBtn.classList.remove("active");
         sortPriceMode = "asc";
         sortSpeedMode = "asc";
-        sortPriceBtn.textContent = "কম দামী আগে দেখাবা";
-        sortSpeedBtn.textContent = "স্লো ফোন আগে দেখাবা";
-        document.title =
-          "KotoTaka – Cheapest Mobile Phone Prices in Bangladesh";
+        sortPriceBtn.textContent = "সবচেয়ে সস্তা আগে";
+        sortSpeedBtn.textContent = "স্লো ট্যাবলেট আগে";
+        document.title = "KotoTaka – Cheapest Tablet Prices in Bangladesh";
         const desc = document.querySelector('meta[name="description"]');
         if (desc)
           desc.content =
-            "Find the lowest prices for Samsung, Xiaomi, iPhone, Realme & more from local shops in Bangladesh. Updated daily.";
+            "Find the lowest prices for Samsung, Xiaomi, iPad, Realme & more from local shops in Bangladesh. Updated daily.";
       });
 
       searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase().trim();
         clearBtn.style.display = query ? "block" : "none";
         autocompleteDiv.innerHTML = "";
+        autocompleteDiv.style.border = "none"
         results.innerHTML = "";
         sortControls.style.display = query ? "flex" : "none";
         currentBrand = null;
         currentPriceRange = null;
-        currentChipset = null;
         document
-          .querySelectorAll(".brand-card, .price-card, .chipset-select")
+          .querySelectorAll(".brand-card, .price-card")
           .forEach((c) => c.classList.remove("selected"));
-        if (!query || !phones.length) return;
+        if (!query || !tablets.length) return;
 
         const queryWords = query.split(/\s+/);
-        const filtered = phones.filter((p) =>
-          queryWords.every((q) => p.searchWords.some((w) => w.startsWith(q)))
+        const filtered = tablets.filter((t) =>
+          queryWords.every((q) => t.searchWords.some((w) => w.startsWith(q)))
         );
         const uniqueNames = [
-          ...new Set(filtered.map((p) => p.cleanName)),
+          ...new Set(filtered.map((t) => t.cleanName)),
         ].slice(0, 10);
         uniqueNames.forEach((name) => {
           const div = document.createElement("div");
           div.classList.add("autocomplete-item");
           div.textContent = name;
           div.addEventListener("click", () => {
-            const clickedCleanName = name; // e.g. "Asus Rog 4"
+            const clickedCleanName = name;
             searchInput.value = clickedCleanName;
             clearBtn.style.display = "block";
             autocompleteDiv.innerHTML = "";
+             autocompleteDiv.style.border = "none"
 
-            // Find all phones that have this cleanName
-            const searchResults = phones.filter(
-              (p) => p.cleanName === clickedCleanName
+            // Find all tablets that have this cleanName
+            const searchResults = tablets.filter(
+              (t) => t.cleanName === clickedCleanName
             );
 
             showAllVariants(applySort(searchResults));
-            mobileScrollToResults();
+            if (window.innerWidth <= 768) scrollToResults();
             updatePageMeta(
               clickedCleanName,
               `Latest price for ${clickedCleanName} in Bangladesh from local shops.`
             );
           });
+
+          autocompleteDiv.style.border = `1px solid var(--border)`
           autocompleteDiv.appendChild(div);
         });
       });
@@ -1765,9 +1682,51 @@ const sourceLinkHTML = selected.info.source?.startsWith('http')
       document.addEventListener("click", (e) => {
         if (e.target !== searchInput && !autocompleteDiv.contains(e.target))
           autocompleteDiv.innerHTML = "";
+         autocompleteDiv.style.border = "none"
       });
-      // For no reason
+
+      // Lazy loading for images
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove("lazy");
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      function scrollToResults() {
+        document
+          .getElementById("results")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      function scrollAfterPageChange() {
+        scrollToResults();
+      }
+      const months = [
+        "",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      function formatDate(d) {
+        if (!d) return "Recently";
+        const [day, month, year] = d.split("/");
+        return `${parseInt(day)} ${months[parseInt(month)]}, ${year}`;
+      }
     </script>
-    <script src="script.js"></script>
+    <script src="/tablet.js"></script>
   </body>
 </html>

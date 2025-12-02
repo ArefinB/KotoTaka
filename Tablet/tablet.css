@@ -1,3 +1,32 @@
+    /* ---------------------- */
+
+.shop {
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.price-prefix {
+  opacity: 0.9;
+}
+
+.shop-prefix {
+  color: #f5b09b;
+  margin-left: 8px;
+}
+
+.price {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.shop-name {
+  color: var(--accent);
+}
+    
     /* FAQ SECTION */
     .faq-container {
       width: 100%;
@@ -386,6 +415,8 @@
   }
 }
 
+
+
 /* ---- ADD INSIDE your <style> tag (anywhere after the other @media blocks) ---- */
 @media (max-width: 768px) {
   /* autocomplete keeps the nice blur – it’s a single element, cheap */
@@ -399,4 +430,3 @@
     box-shadow: var(--shadow) !important;
   }
 }
-
